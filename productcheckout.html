@@ -1,665 +1,374 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkout</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cloudflare.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
-    <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <meta name="description" content="Secure Checkout for SIVA & HERB OILS. Pure botanical hair, skin, and cooking oils." />
+  <title>Secure Checkout | SIVA & HERB OILS</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f6f8;
-      color: #222;
-    }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Playfair+Display:ital,wght@0,500..800;1,500..800&display=swap" rel="stylesheet">
 
-    .header {
-      background: #111827;
-      color: white;
-      padding: 20px 8%;
-    }
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    .header h1 {
-      font-size: 24px;
-    }
-
-
-
-    .checkout-container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 40px auto;
-      display: grid;
-      grid-template-columns: 1.7fr 1fr;
-      gap: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-      margin-bottom: 20px;
-    }
-
-    .card h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .form-group {
-      margin-bottom: 16px;
-    }
-
-    .form-group.full {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 7px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    input,
-    select {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #d1d5db;
-      border-radius: 7px;
-      font-size: 14px;
-      outline: none;
-    }
-
-    input:focus,
-    select:focus {
-      border-color: #2563eb;
-    }
-
-    .payment-option {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 13px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-
-    .payment-option input {
-      width: auto;
-    }
-
-    .product {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      padding-bottom: 20px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .product img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 8px;
-      background: #eee;
-    }
-
-    .product-info {
-      flex: 1;
-    }
-
-    .product-info h3 {
-      font-size: 16px;
-      margin-bottom: 7px;
-    }
-
-    .product-info p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    .price {
-      font-weight: bold;
-    }
-
-    .summary-row {
-      display: flex;
-      justify-content: space-between;
-      margin: 14px 0;
-      color: #555;
-    }
-
-    .total {
-      border-top: 1px solid #ddd;
-      padding-top: 18px;
-      margin-top: 18px;
-      font-size: 20px;
-      font-weight: bold;
-      color: #111;
-    }
-
-    .place-order {
-      width: 100%;
-      padding: 15px;
-      border: none;
-      border-radius: 8px;
-      background: #2563eb;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    .place-order:hover {
-      background: #1d4ed8;
-    }
-
-    .secure {
-      text-align: center;
-      margin-top: 15px;
-      color: #777;
-      font-size: 13px;
-    }
-
-    @media (max-width: 768px) {
-      .checkout-container {
-        grid-template-columns: 1fr;
-        margin-top: 25px;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .form-group.full {
-        grid-column: auto;
-      }
-    }
-  </style>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="bg-cream">
 
-<body>
-  <!--navbar-->
-    <header class="site-header">
-    <div class="container nav">
-
-      <!-- Mobile Menu -->
-      <div class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">
-        ☰
+  <!-- Site Preloader Screen -->
+  <div class="site-loader" id="siteLoader">
+    <div class="loader-content">
+      <div class="loader-brand">SIVA &amp; HERB OILS</div>
+      <div class="loader-symbol">
+        <div class="loader-ring"></div>
+        <div class="loader-leaf"><i class="fa-solid fa-leaf"></i></div>
       </div>
+      <p class="loader-subtitle">PREPARING SECURE BOTANICAL CHECKOUT</p>
+      <div class="loader-line"><span></span></div>
+    </div>
+  </div>
 
-      <!-- Logo -->
-      <a href="#home" class="brand">
-        SIVA & HERB OILS
+  <!-- Checkout Minimal Header -->
+  <header class="bg-white border-bottom py-3 sticky-top shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="brand text-decoration-none">
+        <i class="fa-solid fa-spa brand-icon"></i>
+        <span>SIVA &amp; HERB OILS</span>
       </a>
 
-      <!-- Navigation -->
-      <nav id="navLinks">
-        <a class="active" href="index.html">Home</a>
-        <a href="seller.html">About Us</a>
-        <a href="catalog.html">Shop</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
-
-      <!-- Navigation Actions -->
-        <div class="nav-actions">
-
-        <!-- Search -->
-        <div class="search-container">
-          <form action="" class="search-form">
-
-            <input type="text" name="search" placeholder="Search..." aria-label="Search">
-
-            <button type="submit" aria-label="Search">
-              <i class="fa fa-search"></i>
-            </button>
-
-          </form>
-        </div>
-
-
-        <!-- Cart -->
-        <a href="add to card .html" class="cart-link" aria-label="Shopping Cart">
-
-          <div class="icon">
-            🛒
-          </div>
-
-          <span class="cart-count">3</span>
-
+      <div class="d-flex align-items-center gap-3">
+        <span class="text-success small fw-semibold d-none d-sm-inline">
+          <i class="fa-solid fa-shield-halved me-1"></i> 256-Bit SSL Encrypted
+        </span>
+        <a href="cart.html" class="btn btn-outline-dark btn-sm rounded-pill px-3">
+          <i class="fa-solid fa-bag-shopping me-1"></i> Back to Bag
         </a>
-
       </div>
-
     </div>
- 
-  <header class="header">
-    
-    <n type="">
-                <a href="p1.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#5985E1">
-                        <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-                    </svg>
-                </a>
-              </n>
-
-       <h1>Product Checkout</h1>
-   
   </header>
 
-  <main class="checkout-container">
+  <!-- Checkout Process -->
+  <main class="container py-4 my-2">
+    <!-- Step Indicator -->
+    <div class="checkout-steps">
+      <a href="cart.html" class="checkout-step-pill text-decoration-none">
+        <span class="checkout-step-num bg-success text-white"><i class="fa-solid fa-check"></i></span>
+        <span>1. Bag</span>
+      </a>
+      <div class="checkout-step-divider"></div>
+      <div class="checkout-step-pill active">
+        <span class="checkout-step-num">2</span>
+        <span>2. Shipping &amp; Payment</span>
+      </div>
+      <div class="checkout-step-divider"></div>
+      <div class="checkout-step-pill">
+        <span class="checkout-step-num">3</span>
+        <span>3. Confirmation</span>
+      </div>
+    </div>
 
-    <!-- Left Section -->
-    <section>
-
-      <!-- Customer Details -->
-      <div class="card">
-        <h2>Customer Details</h2>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" placeholder="siva" />
+    <div class="row g-4">
+      <!-- Left Column: Checkout Form -->
+      <div class="col-lg-7">
+        <form id="checkoutForm" onsubmit="handleCheckoutSubmission(event)">
+          
+          <!-- 1. Contact Information -->
+          <div class="bg-white p-4 rounded-4 border shadow-sm mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="font-serif fw-bold text-dark mb-0">1. Contact Information</h5>
+              <span class="small text-muted">Already have an account? <a href="#" class="text-green text-decoration-none fw-semibold">Log in</a></span>
+            </div>
+            
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="checkoutEmail" class="form-label small fw-semibold">Email Address *</label>
+                <input type="email" class="form-control" id="checkoutEmail" placeholder="yourname@gmail.com" required>
+              </div>
+              <div class="col-md-6">
+                <label for="checkoutPhone" class="form-label small fw-semibold">Mobile Phone (for delivery updates) *</label>
+                <div class="input-group">
+                  <span class="input-group-text small bg-light">+91</span>
+                  <input type="tel" class="form-control" id="checkoutPhone" placeholder="98765 43210" pattern="[0-9]{10}" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="newsletterCheck" checked>
+                  <label class="form-check-label small text-muted" for="newsletterCheck">
+                    Email me with botanical wellness rituals, harvest stories, and member discounts
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" placeholder="prasath" />
+          <!-- 2. Shipping Address -->
+          <div class="bg-white p-4 rounded-4 border shadow-sm mb-4">
+            <h5 class="font-serif fw-bold text-dark mb-3">2. Delivery Address</h5>
+            
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="shippingFirstName" class="form-label small fw-semibold">First Name *</label>
+                <input type="text" class="form-control" id="shippingFirstName" placeholder="Siva" required>
+              </div>
+              <div class="col-md-6">
+                <label for="shippingLastName" class="form-label small fw-semibold">Last Name *</label>
+                <input type="text" class="form-control" id="shippingLastName" placeholder="Kumar" required>
+              </div>
+              <div class="col-12">
+                <label for="shippingAddress" class="form-label small fw-semibold">Street Address / House No. *</label>
+                <input type="text" class="form-control" id="shippingAddress" placeholder="Flat 402, Green Valley Apartments" required>
+              </div>
+              <div class="col-12">
+                <label for="shippingApartment" class="form-label small fw-semibold">Apartment, Suite, Landmark (Optional)</label>
+                <input type="text" class="form-control" id="shippingApartment" placeholder="Near Botanical Gardens">
+              </div>
+              <div class="col-md-5">
+                <label for="shippingCity" class="form-label small fw-semibold">City *</label>
+                <input type="text" class="form-control" id="shippingCity" placeholder="Chennai" required>
+              </div>
+              <div class="col-md-4">
+                <label for="shippingState" class="form-label small fw-semibold">State *</label>
+                <select class="form-select" id="shippingState" required>
+                  <option value="Tamil Nadu" selected>Tamil Nadu</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Delhi">Delhi NCR</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Other">Other States</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="shippingPincode" class="form-label small fw-semibold">PIN Code *</label>
+                <input type="text" class="form-control" id="shippingPincode" placeholder="600001" pattern="[0-9]{6}" required>
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="sivaprasath@gamil.com" />
+          <!-- 3. Delivery Method -->
+          <div class="bg-white p-4 rounded-4 border shadow-sm mb-4">
+            <h5 class="font-serif fw-bold text-dark mb-3">3. Shipping Speed</h5>
+            
+            <div class="form-check payment-method-card active mb-2">
+              <input class="form-check-input" type="radio" name="shippingMethod" id="shipStandard" value="standard" checked onchange="renderCheckoutPage()">
+              <label class="form-check-label d-flex justify-content-between align-items-center w-100" for="shipStandard">
+                <div>
+                  <strong class="d-block text-dark">Standard Botanical Courier (3–5 Days)</strong>
+                  <small class="text-muted">Eco-packaged in recyclable amber glass &amp; sugarcane cardboard</small>
+                </div>
+                <span class="text-success fw-bold">FREE over ₹999</span>
+              </label>
+            </div>
+
+            <div class="form-check payment-method-card">
+              <input class="form-check-input" type="radio" name="shippingMethod" id="shipExpress" value="express" onchange="renderCheckoutPage()">
+              <label class="form-check-label d-flex justify-content-between align-items-center w-100" for="shipExpress">
+                <div>
+                  <strong class="d-block text-dark">Express Priority Dispatch (1–2 Days)</strong>
+                  <small class="text-muted">Same-day blending and thermal temperature-controlled shipment</small>
+                </div>
+                <span class="fw-bold text-green">₹99</span>
+              </label>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" placeholder="+91 9345668970" />
+          <!-- 4. Payment Options -->
+          <div class="bg-white p-4 rounded-4 border shadow-sm mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="font-serif fw-bold text-dark mb-0">4. Payment Method</h5>
+              <span class="badge bg-sage text-green fw-semibold"><i class="fa-solid fa-lock me-1"></i> Safe &amp; Protected</span>
+            </div>
+
+            <!-- UPI Payment -->
+            <div class="payment-method-card active" id="payMethodUpi">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentOption" id="payUpi" value="upi" checked>
+                <label class="form-check-label fw-bold text-dark w-100 d-flex justify-content-between align-items-center" for="payUpi">
+                  <span>UPI (Google Pay, PhonePe, Paytm, QR)</span>
+                  <span class="badge bg-warning-subtle text-warning-emphasis border rounded-pill">Fastest</span>
+                </label>
+              </div>
+              <div class="mt-3 pt-3 border-top upi-qr-card">
+                <div class="d-flex flex-wrap align-items-center justify-content-center gap-3">
+                  <div class="p-2 bg-white rounded-3 border text-center shadow-sm">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=upi://pay?pa=sivaherboils@navikx&pn=SIVA%20HERB%20OILS" alt="Scan UPI QR" style="width: 100px; height: 100px;">
+                    <span class="d-block text-muted" style="font-size: 10px;">Scan with any UPI App</span>
+                  </div>
+                  <div class="text-start" style="max-width: 250px;">
+                    <label class="form-label small fw-semibold text-muted mb-1">Or Enter UPI Virtual ID (VPA):</label>
+                    <div class="input-group input-group-sm">
+                      <input type="text" class="form-control" placeholder="username@okhdfcbank">
+                      <button class="btn btn-outline-success" type="button">Verify</button>
+                    </div>
+                    <span class="text-muted d-block mt-1" style="font-size: 11px;">Instant verification &amp; 0% transaction fee</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Payment -->
+            <div class="payment-method-card" id="payMethodCard">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentOption" id="payCard" value="card">
+                <label class="form-check-label fw-bold text-dark w-100 d-flex justify-content-between align-items-center" for="payCard">
+                  <span>Credit / Debit Card (Visa, MasterCard, RuPay)</span>
+                  <span class="text-muted"><i class="fa-brands fa-cc-visa me-1"></i><i class="fa-brands fa-cc-mastercard"></i></span>
+                </label>
+              </div>
+              <div class="mt-3 pt-3 border-top" id="cardInputsBox">
+                <div class="row g-2">
+                  <div class="col-12">
+                    <input type="text" class="form-control form-control-sm" placeholder="Card Number (e.g. 4532 •••• •••• 8910)">
+                  </div>
+                  <div class="col-6">
+                    <input type="text" class="form-control form-control-sm" placeholder="MM / YY">
+                  </div>
+                  <div class="col-6">
+                    <input type="password" class="form-control form-control-sm" placeholder="CVV" maxlength="4">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Net Banking -->
+            <div class="payment-method-card" id="payMethodNetBanking">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentOption" id="payNetBanking" value="netbanking">
+                <label class="form-check-label fw-bold text-dark w-100" for="payNetBanking">
+                  <span>Net Banking (All Indian Banks)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Cash on Delivery -->
+            <div class="payment-method-card" id="payMethodCod">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentOption" id="payCod" value="cod">
+                <label class="form-check-label fw-bold text-dark w-100 d-flex justify-content-between align-items-center" for="payCod">
+                  <span>Cash on Delivery (COD)</span>
+                  <span class="text-muted small">Pay upon arrival</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Place Order Button -->
+          <button type="submit" class="btn btn-green w-100 py-3 rounded-pill fw-bold fs-5 shadow-lg d-flex align-items-center justify-content-center gap-2" id="placeOrderBtn">
+            <i class="fa-solid fa-lock"></i>
+            <span>Place Order (<span id="placeOrderBtnPrice">₹0</span>)</span>
+          </button>
+
+          <p class="text-center text-muted small mt-3">
+            By placing your order, you agree to SIVA &amp; HERB OILS <a href="#" class="text-green text-decoration-none">Terms of Service</a> and <a href="#" class="text-green text-decoration-none">Privacy Policy</a>.
+          </p>
+        </form>
+      </div>
+
+      <!-- Right Column: Order Summary -->
+      <div class="col-lg-5">
+        <div class="order-summary-box">
+          <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+            <h5 class="font-serif fw-bold text-green mb-0">Order Summary</h5>
+            <a href="cart.html" class="text-muted small text-decoration-none">Edit Bag</a>
+          </div>
+
+          <!-- Dynamic Products List -->
+          <div id="checkoutSummaryItems" style="max-height: 280px; overflow-y: auto;">
+            <!-- Filled dynamically by script.js renderCheckoutPage() -->
+          </div>
+
+          <!-- Coupon Input -->
+          <div class="input-group my-3">
+            <input type="text" id="checkoutCouponInput" class="form-control form-control-sm text-uppercase" placeholder="Coupon Code">
+            <button class="btn btn-outline-dark btn-sm" type="button" onclick="applyCoupon(document.getElementById('checkoutCouponInput').value)">
+              Apply
+            </button>
+          </div>
+
+          <!-- Calculations -->
+          <div class="d-flex justify-content-between align-items-center mb-2 small">
+            <span class="text-muted">Subtotal</span>
+            <strong class="text-dark" id="checkoutSubtotal">₹0</strong>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-2 small text-success d-none" id="checkoutDiscountRow">
+            <span>Coupon Discount</span>
+            <strong id="checkoutDiscount">-₹0</strong>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-2 small">
+            <span class="text-muted">Shipping</span>
+            <span class="fw-semibold" id="checkoutShipping">₹0</span>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-3 small">
+            <span class="text-muted">GST (5% included)</span>
+            <span class="text-muted" id="checkoutTax">₹0</span>
+          </div>
+
+          <hr class="my-3">
+
+          <div class="d-flex justify-content-between align-items-baseline mb-4">
+            <span class="fw-bold text-dark fs-5">Total Amount</span>
+            <strong class="text-green fw-bold fs-3 font-serif" id="checkoutGrandTotal">₹0</strong>
+          </div>
+
+          <!-- Trust Guarantees -->
+          <div class="bg-sage p-3 rounded-3 small">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="fa-solid fa-leaf text-gold"></i>
+              <strong>100% Traditional Formulation</strong>
+            </div>
+            <p class="text-muted mb-0" style="font-size: 12px;">
+              Every bottle is handcrafted in small batches using cold-pressed extraction to retain the natural character of each plant root and seed.
+            </p>
           </div>
         </div>
       </div>
-
-      <!-- Shipping Address -->
-      <div class="card">
-        <h2>Shipping Address</h2>
-
-        <div class="form-row">
-          <div class="form-group full">
-            <label for="address">Street Address</label>
-            <input type="text" id="address" placeholder="205 2nd Street" />
-          </div>
-
-          <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" id="city" placeholder="salem" />
-          </div>
-
-          <div class="form-group">
-            <label for="state">State</label>
-            <select id="state">
-              <option value="">Select State</option>
-              <option>Tamil Nadu</option>
-              <option>Karnataka</option>
-              <option>Kerala</option>
-              <option>Maharashtra</option>
-              <option>Telangana</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="zip">PIN Code</label>
-            <input type="text" id="zip" placeholder="636636" />
-          </div>
-
-          <div class="form-group">
-            <label for="country">Country</label>
-            <select id="country">
-              <option>India</option>
-              <option>United States</option>
-              <option>United Kingdom</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- Payment -->
-      <div class="card">
-        <h2>Payment Method</h2>
-
-        <label class="payment-option">
-          <input type="radio" name="payment" value="card" checked />
-          Credit / Debit Card
-          <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40"
-              height="40" viewBox="0 0 256 256" xml:space="preserve">
-              <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                <path
-                  d="M 0 45 c 0 9.925 3.22 19.094 8.663 26.535 h 72.674 C 86.78 64.094 90 54.925 90 45 s -3.22 -19.094 -8.663 -26.535 H 8.663 C 3.22 25.906 0 35.075 0 45 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(240,240,240); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 9.259 34.213 c 0.96 -0.494 2.058 -0.295 3.089 -0.314 c 2.362 0.062 4.728 -0.057 7.09 0.048 c 1.064 -0.005 1.977 0.879 2.124 1.91 c 0.741 3.592 1.421 7.199 2.148 10.801 c -1.202 -4.22 -4.376 -7.665 -8.107 -9.855 C 13.631 35.619 11.43 34.93 9.259 34.213 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(244,169,41); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 29.806 33.909 c 2.048 0.024 4.091 0.014 6.135 0 c -3.108 7.427 -6.006 14.94 -9.181 22.339 c -1.996 -0.062 -3.992 -0.033 -5.987 -0.033 c -1.768 -6.458 -3.417 -12.949 -5.17 -19.411 c 3.73 2.191 6.904 5.636 8.107 9.855 c 0.181 0.817 0.309 1.654 0.466 2.48 C 26.038 44.059 27.924 38.984 29.806 33.909 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,77,162); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 38.236 33.899 c 1.925 0.014 3.849 0.014 5.774 0 c -1.183 7.441 -2.428 14.873 -3.583 22.32 c -1.915 0.005 -3.83 0.005 -5.75 0 C 35.779 48.768 37.076 41.345 38.236 33.899 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,77,162); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 49.483 35.301 c 3.45 -2.267 7.959 -2.2 11.775 -0.946 c -0.176 1.649 -0.451 3.284 -0.737 4.913 c -2.029 -0.974 -4.395 -1.407 -6.6 -0.841 c -1.041 0.247 -2.067 1.54 -1.202 2.509 c 1.777 1.82 4.576 2.233 6.249 4.215 c 1.939 1.896 1.867 5.089 0.546 7.308 c -1.397 2.343 -4.087 3.569 -6.705 3.92 c -2.96 0.309 -6.044 0.124 -8.819 -1.022 c 0.295 -1.663 0.542 -3.336 0.841 -4.999 c 2.4 1.24 5.184 1.863 7.86 1.269 c 0.908 -0.304 1.844 -1.05 1.763 -2.115 c -0.299 -1.269 -1.625 -1.81 -2.656 -2.385 c -2.001 -0.984 -4.153 -2.191 -5.051 -4.353 C 45.63 40.043 47.107 36.845 49.483 35.301 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,77,162); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 76.07 33.928 c -1.768 0.033 -3.545 -0.071 -5.313 0.052 c -1.202 0.062 -1.963 1.178 -2.347 2.205 c -2.78 6.691 -5.593 13.367 -8.378 20.053 c 2.015 -0.005 4.03 -0.005 6.044 -0.005 c 0.423 -1.117 0.832 -2.243 1.226 -3.369 c 2.461 0.014 4.923 0.01 7.389 0.01 c 0.228 1.126 0.466 2.248 0.718 3.364 c 1.777 -0.005 3.554 -0.005 5.332 -0.01 C 79.183 48.796 77.652 41.36 76.07 33.928 z M 68.98 48.273 c 1.074 -2.761 1.953 -5.602 3.155 -8.311 c 0.356 2.804 1.055 5.55 1.63 8.316 C 72.169 48.278 70.577 48.278 68.98 48.273 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,77,162); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path d="M 83.427 21.576 C 75.524 8.637 61.271 0 45 0 S 14.476 8.637 6.573 21.576 H 83.427 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(27,77,162); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 6.573 68.424 C 14.476 81.362 28.727 89.999 44.998 90 h 0.005 c 16.27 -0.001 30.522 -8.638 38.425 -21.576 H 6.573 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(244,169,41); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-              </g>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40"
-              height="40" viewBox="0 0 256 256" xml:space="preserve">
-              <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                <path
-                  d="M 84.259 16.068 H 5.741 C 2.57 16.068 0 18.638 0 21.809 v 6.131 v 2 V 60.06 v 2 v 6.131 c 0 3.171 2.57 5.741 5.741 5.741 h 78.518 c 3.171 0 5.741 -2.57 5.741 -5.741 V 62.06 v -2 V 29.94 v -2 v -6.131 C 90 18.638 87.43 16.068 84.259 16.068 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(1,111,208); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 4 68.191 V 62.06 v -2 V 29.94 v -2 v -6.131 c 0 -3.171 2.57 -5.741 5.741 -5.741 h -4 C 2.57 16.068 0 18.638 0 21.809 v 6.131 V 62.06 v 6.131 c 0 3.171 2.57 5.741 5.741 5.741 h 4 C 6.57 73.932 4 71.362 4 68.191 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,100,188); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 17.513 36.122 L 9.5 53.855 h 9.593 l 1.189 -2.827 H 23 l 1.189 2.827 h 10.559 v -2.158 l 0.941 2.158 h 5.462 l 0.941 -2.203 v 2.203 h 21.959 l 2.67 -2.754 l 2.5 2.754 L 80.5 53.878 l -8.038 -8.839 l 8.038 -8.916 H 69.396 l -2.599 2.703 l -2.422 -2.703 H 40.487 l -2.051 4.577 l -2.099 -4.577 h -9.573 v 2.084 l -1.065 -2.084 C 25.698 36.122 17.513 36.122 17.513 36.122 z M 19.369 38.64 h 4.676 l 5.315 12.024 V 38.64 h 5.122 l 4.105 8.621 l 3.783 -8.621 h 5.097 v 12.724 h -3.101 l -0.025 -9.971 l -4.521 9.971 h -2.774 l -4.547 -9.971 v 9.971 h -6.38 l -1.21 -2.853 h -6.534 l -1.207 2.85 H 13.75 C 13.75 51.362 19.369 38.64 19.369 38.64 z M 50.305 38.64 h 12.61 l 3.857 4.166 l 3.981 -4.166 h 3.857 l -5.86 6.395 l 5.86 6.321 h -4.032 l -3.857 -4.214 l -4.001 4.214 H 50.305 L 50.305 38.64 L 50.305 38.64 z M 21.644 40.793 l -2.153 5.082 h 4.303 L 21.644 40.793 z M 53.419 41.275 v 2.323 h 6.879 v 2.589 h -6.879 v 2.536 h 7.716 l 3.585 -3.735 l -3.433 -3.715 h -7.868 L 53.419 41.275 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-              </g>
-            </svg>
-
-
-
-          </div>
-
-        </label>
-
-        <label class="payment-option">
-          <input type="radio" name="payment" value="upi" />
-          UPI
-          <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50"
-              height="50" viewBox="0 0 256 256" xml:space="preserve">
-              <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                <circle cx="45" cy="45" r="45"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(240,240,240); fill-rule: nonzero; opacity: 1;"
-                  transform="  matrix(1 0 0 1 0 0) " />
-                <path
-                  d="M 43.141 44.662 v 7.903 h -2.549 V 33.021 h 6.628 c 1.614 0 3.144 0.595 4.334 1.699 c 1.19 1.02 1.784 2.549 1.784 4.164 s -0.595 3.059 -1.784 4.164 c -1.19 1.105 -2.634 1.699 -4.334 1.699 L 43.141 44.662 L 43.141 44.662 z M 43.141 35.4 v 6.798 h 4.249 c 0.935 0 1.869 -0.34 2.464 -1.02 c 1.36 -1.275 1.36 -3.399 0.085 -4.674 l -0.085 -0.085 c -0.68 -0.68 -1.53 -1.105 -2.464 -1.02 H 43.141 L 43.141 35.4 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(95,99,104); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 59.201 38.799 c 1.869 0 3.314 0.51 4.419 1.53 s 1.614 2.379 1.614 4.079 v 8.157 h -2.379 v -1.869 H 62.77 c -1.02 1.53 -2.464 2.294 -4.164 2.294 c -1.445 0 -2.719 -0.425 -3.739 -1.275 c -0.935 -0.85 -1.53 -2.039 -1.53 -3.314 c 0 -1.36 0.51 -2.464 1.53 -3.314 c 1.02 -0.85 2.464 -1.19 4.164 -1.19 c 1.53 0 2.719 0.255 3.654 0.85 v -0.595 c 0 -0.85 -0.34 -1.699 -1.02 -2.209 c -0.68 -0.595 -1.53 -0.935 -2.464 -0.935 c -1.445 0 -2.549 0.595 -3.314 1.784 l -2.209 -1.36 C 55.037 39.649 56.822 38.799 59.201 38.799 z M 55.972 48.486 c 0 0.68 0.34 1.275 0.85 1.614 c 0.595 0.425 1.275 0.68 1.954 0.68 c 1.02 0 2.039 -0.425 2.804 -1.19 c 0.85 -0.765 1.275 -1.699 1.275 -2.719 c -0.765 -0.595 -1.869 -0.935 -3.314 -0.935 c -1.02 0 -1.869 0.255 -2.549 0.765 C 56.312 47.127 55.972 47.721 55.972 48.486 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(95,99,104); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 79 39.224 l -8.412 19.289 h -2.549 l 3.144 -6.713 l -5.523 -12.491 h 2.719 l 3.994 9.602 h 0.085 l 3.909 -9.602 H 79 V 39.224 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(95,99,104); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 33.029 42.963 c 0 -0.765 -0.085 -1.53 -0.17 -2.294 H 22.238 v 4.334 h 6.033 c -0.255 1.36 -1.02 2.634 -2.209 3.399 v 2.804 h 3.654 C 31.84 49.251 33.029 46.362 33.029 42.963 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(66,133,244); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 22.238 53.924 c 3.059 0 5.608 -1.02 7.478 -2.719 l -3.654 -2.804 c -1.02 0.68 -2.294 1.105 -3.824 1.105 c -2.889 0 -5.438 -1.954 -6.288 -4.674 h -3.739 v 2.889 C 14.165 51.545 17.989 53.924 22.238 53.924 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(52,168,83); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 15.95 44.832 c -0.51 -1.36 -0.51 -2.889 0 -4.334 V 37.61 h -3.739 c -1.614 3.144 -1.614 6.883 0 10.112 L 15.95 44.832 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(251,188,4); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 22.238 35.91 c 1.614 0 3.144 0.595 4.334 1.699 l 0 0 l 3.229 -3.229 c -2.039 -1.869 -4.759 -2.974 -7.478 -2.889 c -4.249 0 -8.157 2.379 -10.027 6.203 l 3.739 2.889 C 16.799 37.865 19.349 35.91 22.238 35.91 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(234,67,53); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-              </g>
-            </svg>
-
-            <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="40" height="40">
-              <circle cx="12" cy="12" r="12" fill="#5F259F" />
-              <path fill="#FFFFFF"
-                d="M11.5 6h-3.2v12h2.1v-4.3h1.1c2.2 0 3.7-1.3 3.7-3.8 0-2.5-1.5-3.9-3.7-3.9zm0 5.8h-1.1V7.9h1.1c1.1 0 1.7.6 1.7 1.9s-.6 1.9-1.7 1.9z" />
-            </svg>
-
-
-          </div>
-
-        </label>
-
-        <label class="payment-option">
-          <input type="radio" name="payment" value="cod" />
-          Cash on Delivery
-          <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40"
-              height="40" viewBox="0 0 256 256" xml:space="preserve">
-              <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                <rect x="2.13" y="25.75" rx="0" ry="0" width="82.5" height="38.5"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(89,153,68); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(0.7025 -0.7116 0.7116 0.7025 -19.1194 44.2588) " />
-                <path
-                  d="M 86.563 29.66 L 28.6 88.374 c -0.273 0.276 -0.718 0.279 -0.994 0.006 L 0.209 61.335 c -0.276 -0.273 -0.279 -0.718 -0.006 -0.994 L 58.166 1.626 c 0.273 -0.276 0.718 -0.279 0.994 -0.006 l 27.396 27.046 C 86.833 28.938 86.835 29.384 86.563 29.66 z M 28.093 86.885 l 56.975 -57.713 L 58.673 3.115 L 1.697 60.828 L 28.093 86.885 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <circle cx="43.379999999999995" cy="45" r="13.68"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(118,204,91); fill-rule: nonzero; opacity: 1;"
-                  transform="  matrix(1 0 0 1 0 0) " />
-                <circle cx="28.351999999999997" cy="60.222" r="2.292"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(118,204,91); fill-rule: nonzero; opacity: 1;"
-                  transform="  matrix(1 0 0 1 0 0) " />
-                <circle cx="57.872" cy="30.322000000000003" r="2.292"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(118,204,91); fill-rule: nonzero; opacity: 1;"
-                  transform="  matrix(1 0 0 1 0 0) " />
-                <path
-                  d="M 53.619 55.105 c -5.572 5.644 -14.696 5.703 -20.341 0.131 c -5.644 -5.572 -5.703 -14.696 -0.131 -20.341 c 5.572 -5.645 14.697 -5.703 20.341 -0.131 C 59.133 40.336 59.191 49.461 53.619 55.105 z M 34.148 35.883 c -5.027 5.092 -4.974 13.325 0.118 18.352 c 5.093 5.028 13.325 4.975 18.352 -0.118 c 5.028 -5.093 4.975 -13.325 -0.118 -18.353 C 47.408 30.738 39.175 30.791 34.148 35.883 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 48.666 50.399 c -1.458 1.476 -3.502 2.019 -5.207 1.381 c -0.364 -0.136 -0.548 -0.541 -0.412 -0.905 c 0.134 -0.364 0.541 -0.548 0.905 -0.412 c 1.169 0.437 2.662 0.015 3.714 -1.051 c 1.053 -1.066 1.456 -2.564 1.004 -3.728 c -0.253 -0.592 -0.601 -0.967 -1.056 -1.124 c -0.812 -0.281 -2.085 0.065 -3.892 1.057 c -1.504 0.826 -3.436 1.703 -5.028 1.153 c -0.84 -0.29 -1.478 -0.937 -1.898 -1.922 c -0.669 -1.719 -0.153 -3.77 1.305 -5.246 s 3.502 -2.018 5.207 -1.38 c 0.364 0.137 0.548 0.541 0.412 0.905 c -0.136 0.363 -0.541 0.548 -0.905 0.412 c -1.169 -0.438 -2.661 -0.016 -3.714 1.051 c -1.053 1.066 -1.456 2.564 -1.003 3.728 c 0.253 0.592 0.601 0.966 1.056 1.124 c 0.811 0.281 2.084 -0.065 3.891 -1.057 c 1.504 -0.826 3.436 -1.703 5.027 -1.153 c 0.84 0.29 1.479 0.936 1.9 1.922 C 50.64 46.871 50.124 48.922 48.666 50.399 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 50.054 51.769 c -0.273 0.276 -0.718 0.279 -0.994 0.006 l -1.388 -1.37 c -0.276 -0.273 -0.279 -0.718 -0.006 -0.994 s 0.718 -0.279 0.994 -0.006 l 1.388 1.37 C 50.324 51.047 50.327 51.493 50.054 51.769 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 38.917 40.775 c -0.273 0.276 -0.718 0.279 -0.994 0.006 l -1.388 -1.37 c -0.276 -0.273 -0.279 -0.718 -0.006 -0.994 s 0.718 -0.279 0.994 -0.006 l 1.388 1.37 C 39.187 40.053 39.19 40.499 38.917 40.775 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 45.084 63.751 L 28.549 80.5 c -0.273 0.276 -0.718 0.279 -0.994 0.006 L 8.084 61.284 c -0.276 -0.273 -0.279 -0.718 -0.006 -0.994 l 12.149 -12.307 c 0.273 -0.276 0.718 -0.279 0.994 -0.006 s 0.279 0.718 0.006 0.994 L 9.572 60.777 l 18.47 18.234 l 16.041 -16.248 c 0.273 -0.276 0.718 -0.279 0.994 -0.006 C 45.354 63.029 45.357 63.475 45.084 63.751 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 25.613 44.529 l -1.596 1.616 c -0.273 0.276 -0.718 0.279 -0.994 0.006 s -0.279 -0.718 -0.006 -0.994 l 1.596 -1.616 c 0.273 -0.276 0.718 -0.279 0.994 -0.006 C 25.883 43.807 25.886 44.253 25.613 44.529 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 78.688 29.711 L 66.54 42.017 c -0.273 0.276 -0.718 0.279 -0.994 0.006 c -0.276 -0.273 -0.279 -0.718 -0.006 -0.994 l 11.655 -11.806 L 58.723 10.99 l -16.04 16.248 c -0.273 0.276 -0.718 0.279 -0.994 0.006 s -0.279 -0.718 -0.006 -0.994 L 58.216 9.501 c 0.273 -0.276 0.718 -0.279 0.994 -0.006 l 19.471 19.222 C 78.958 28.99 78.961 29.435 78.688 29.711 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 63.75 44.843 l -1.596 1.617 c -0.273 0.276 -0.718 0.279 -0.994 0.006 s -0.279 -0.718 -0.006 -0.994 l 1.596 -1.617 c 0.273 -0.276 0.718 -0.279 0.994 -0.006 S 64.023 44.567 63.75 44.843 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 65.733 23.362 l -2.578 2.611 c -0.273 0.276 -0.718 0.279 -0.994 0.006 c -0.276 -0.273 -0.279 -0.718 -0.006 -0.994 l 2.578 -2.611 c 0.273 -0.276 0.718 -0.279 0.994 -0.006 C 66.002 22.64 66.005 23.085 65.733 23.362 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 24.612 65.015 l -2.578 2.611 c -0.273 0.276 -0.718 0.279 -0.994 0.006 c -0.276 -0.273 -0.279 -0.718 -0.006 -0.994 l 2.578 -2.611 c 0.273 -0.276 0.718 -0.279 0.994 -0.006 C 24.882 64.294 24.884 64.739 24.612 65.015 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 30.487 62.326 c -1.16 1.175 -3.06 1.188 -4.235 0.027 c -1.175 -1.16 -1.187 -3.06 -0.027 -4.235 c 1.16 -1.175 3.06 -1.187 4.235 -0.027 C 31.635 59.252 31.647 61.151 30.487 62.326 z M 27.225 59.106 c -0.615 0.623 -0.609 1.631 0.014 2.246 c 0.623 0.615 1.631 0.609 2.246 -0.014 c 0.615 -0.623 0.609 -1.631 -0.014 -2.246 C 28.848 58.477 27.84 58.483 27.225 59.106 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 60.005 32.426 c -1.16 1.175 -3.06 1.188 -4.235 0.027 c -1.175 -1.16 -1.188 -3.06 -0.027 -4.235 c 1.16 -1.175 3.06 -1.187 4.235 -0.027 C 61.153 29.351 61.165 31.25 60.005 32.426 z M 56.743 29.206 c -0.616 0.624 -0.609 1.631 0.014 2.246 s 1.631 0.609 2.246 -0.014 s 0.609 -1.631 -0.014 -2.246 S 57.359 28.582 56.743 29.206 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <rect x="6.79" y="43.47" rx="0" ry="0" width="82.5" height="38.5"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(89,153,68); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " />
-                <path
-                  d="M 89.297 82.666 H 6.792 c -0.388 0 -0.703 -0.315 -0.703 -0.703 V 43.466 c 0 -0.388 0.315 -0.703 0.703 -0.703 h 82.505 c 0.388 0 0.703 0.315 0.703 0.703 v 38.497 C 90 82.351 89.685 82.666 89.297 82.666 z M 7.495 81.26 h 81.099 V 44.169 H 7.495 V 81.26 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <circle cx="48.04" cy="62.72" r="13.68"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(118,204,91); fill-rule: nonzero; opacity: 1;"
-                  transform="  matrix(1 0 0 1 0 0) " />
-                <circle cx="26.652" cy="62.712" r="2.292"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(118,204,91); fill-rule: nonzero; opacity: 1;"
-                  transform="  matrix(1 0 0 1 0 0) " />
-                <circle cx="68.672" cy="62.712" r="2.292"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(118,204,91); fill-rule: nonzero; opacity: 1;"
-                  transform="  matrix(1 0 0 1 0 0) " />
-                <path
-                  d="M 48.044 77.099 c -7.931 0 -14.383 -6.452 -14.383 -14.384 c 0 -7.931 6.452 -14.383 14.383 -14.383 c 7.932 0 14.384 6.452 14.384 14.383 C 62.428 70.646 55.976 77.099 48.044 77.099 z M 48.044 49.738 c -7.156 0 -12.977 5.821 -12.977 12.977 c 0 7.156 5.821 12.977 12.977 12.977 c 7.156 0 12.977 -5.821 12.977 -12.977 C 61.022 55.559 55.201 49.738 48.044 49.738 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 47.914 70.267 c -2.075 0 -3.897 -1.074 -4.641 -2.736 c -0.159 -0.354 0 -0.77 0.354 -0.929 c 0.353 -0.16 0.77 0 0.929 0.354 c 0.51 1.139 1.86 1.904 3.357 1.904 c 1.498 0 2.848 -0.765 3.358 -1.904 c 0.244 -0.596 0.266 -1.107 0.058 -1.541 c -0.371 -0.775 -1.511 -1.438 -3.486 -2.027 c -1.645 -0.49 -3.626 -1.248 -4.353 -2.768 c -0.383 -0.802 -0.372 -1.71 0.034 -2.701 c 0.754 -1.683 2.575 -2.757 4.65 -2.757 s 3.896 1.074 4.641 2.736 c 0.158 0.355 0 0.77 -0.354 0.929 c -0.354 0.158 -0.77 0 -0.929 -0.354 c -0.51 -1.139 -1.859 -1.905 -3.357 -1.905 s -2.847 0.765 -3.358 1.905 c -0.244 0.596 -0.266 1.106 -0.058 1.541 c 0.37 0.775 1.511 1.437 3.486 2.027 c 1.645 0.49 3.626 1.248 4.352 2.768 c 0.384 0.802 0.373 1.71 -0.033 2.702 C 51.811 69.193 49.99 70.267 47.914 70.267 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 47.914 72.218 c -0.388 0 -0.703 -0.315 -0.703 -0.703 v -1.95 c 0 -0.388 0.315 -0.703 0.703 -0.703 s 0.703 0.315 0.703 0.703 v 1.95 C 48.617 71.903 48.302 72.218 47.914 72.218 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 47.914 56.569 c -0.388 0 -0.703 -0.315 -0.703 -0.703 v -1.95 c 0 -0.388 0.315 -0.703 0.703 -0.703 s 0.703 0.315 0.703 0.703 v 1.95 C 48.617 56.254 48.302 56.569 47.914 56.569 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 35.896 77.099 H 12.36 c -0.388 0 -0.703 -0.315 -0.703 -0.703 V 49.035 c 0 -0.388 0.315 -0.703 0.703 -0.703 h 17.293 c 0.388 0 0.703 0.315 0.703 0.703 s -0.315 0.703 -0.703 0.703 h -16.59 v 25.954 h 22.832 c 0.388 0 0.703 0.315 0.703 0.703 S 36.284 77.099 35.896 77.099 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 35.896 49.738 h -2.271 c -0.388 0 -0.703 -0.315 -0.703 -0.703 s 0.315 -0.703 0.703 -0.703 h 2.271 c 0.388 0 0.703 0.315 0.703 0.703 S 36.284 49.738 35.896 49.738 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 83.728 77.099 H 66.436 c -0.388 0 -0.703 -0.315 -0.703 -0.703 s 0.315 -0.703 0.703 -0.703 h 16.589 V 49.738 H 60.193 c -0.388 0 -0.703 -0.315 -0.703 -0.703 s 0.315 -0.703 0.703 -0.703 h 23.535 c 0.388 0 0.703 0.315 0.703 0.703 v 27.361 C 84.431 76.784 84.116 77.099 83.728 77.099 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 62.465 77.099 h -2.272 c -0.388 0 -0.703 -0.315 -0.703 -0.703 s 0.315 -0.703 0.703 -0.703 h 2.272 c 0.388 0 0.703 0.315 0.703 0.703 S 62.853 77.099 62.465 77.099 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 79.145 63.418 h -3.67 c -0.388 0 -0.703 -0.315 -0.703 -0.703 s 0.315 -0.703 0.703 -0.703 h 3.67 c 0.388 0 0.703 0.315 0.703 0.703 S 79.533 63.418 79.145 63.418 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 20.613 63.418 h -3.669 c -0.388 0 -0.703 -0.315 -0.703 -0.703 s 0.315 -0.703 0.703 -0.703 h 3.669 c 0.388 0 0.703 0.315 0.703 0.703 S 21.001 63.418 20.613 63.418 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 26.654 65.71 c -1.651 0 -2.995 -1.343 -2.995 -2.995 c 0 -1.651 1.344 -2.995 2.995 -2.995 s 2.995 1.344 2.995 2.995 C 29.649 64.367 28.305 65.71 26.654 65.71 z M 26.654 61.126 c -0.876 0 -1.589 0.713 -1.589 1.589 c 0 0.876 0.713 1.589 1.589 1.589 s 1.589 -0.713 1.589 -1.589 C 28.243 61.839 27.53 61.126 26.654 61.126 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                <path
-                  d="M 68.671 65.71 c -1.652 0 -2.995 -1.343 -2.995 -2.995 c 0 -1.651 1.343 -2.995 2.995 -2.995 s 2.995 1.344 2.995 2.995 C 71.665 64.367 70.322 65.71 68.671 65.71 z M 68.671 61.126 c -0.876 0 -1.589 0.713 -1.589 1.589 c 0 0.876 0.712 1.589 1.589 1.589 s 1.589 -0.713 1.589 -1.589 C 70.259 61.839 69.547 61.126 68.671 61.126 z"
-                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-              </g>
-            </svg>
-          </div>
-        </label>
-      </div>
-
-    </section>
-
-    <!-- Right Section -->
-    <aside>
-
-      <div class="card">
-        <h2>Order Summary</h2>
-
-        <div class="product">
-          <img src="assets/product-1.jpg" alt="Product" />
-
-          <div class="product-info">
-            <h3>Cold Pressed Coconut Oil</h3>
-            <p>Quantity: 1</p>
-          </div>
-
-          <span class="price">₹299</span>
-        </div>
-
-        <div class="summary-row">
-          <span>Subtotal</span>
-          <span>₹299</span>
-        </div>
-
-        <div class="summary-row">
-          <span>Shipping</span>
-          <span>₹10</span>
-        </div>
-
-
-
-        <div class="summary-row total">
-          <span>Total</span>
-          <span>₹319</span>
-        </div>
-
-        <button class="place-order" onclick="placeOrder()">
-          Place Order
-        </button>
-
-        <p class="secure">
-          🔒 Secure checkout · Your payment is protected
-        </p>
-      </div>
-
-    </aside>
-
+    </div>
   </main>
 
+  <!-- Site Footer -->
+  <footer id="contact" class="mt-5">
+    <div class="footer-container">
+      <div class="footer-box company">
+        <a href="index.html" class="footer-brand text-decoration-none">
+          <i class="fa-solid fa-spa"></i>
+          <span>SIVA &amp; HERB OILS</span>
+        </a>
+        <p>Pure handmade botanical oils crafted in harmony with traditional Ayurvedic wisdom.</p>
+      </div>
 
+      <div class="footer-box">
+        <h4>Support</h4>
+        <a href="contact.html">Customer Service</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Returns &amp; Exchanges</a>
+      </div>
 
+      <div class="footer-box">
+        <h4>Security</h4>
+        <div class="trust-badge mb-2"><i class="fa-solid fa-lock"></i> 256-Bit SSL Protection</div>
+        <div class="trust-badge"><i class="fa-solid fa-shield-heart"></i> Guaranteed Freshness</div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 SIVA &amp; HERB OILS. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core Script -->
+  <script src="script.js"></script>
 </body>
-<script
- src="script.js"></script>
 </html>

@@ -1,362 +1,329 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oils and Restorative Serum - Ultra-nourishing botanical face and body serum with pure squalene, cold-pressed rosehip and saffron." />
+  <title>Oils and Restorative Serum | SIVA & HERB OILS</title>
 
-    <title>Hibiscus Revitalizing Oil</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Playfair+Display:ital,wght@0,500..800;1,500..800&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="productdetail.css">
-    <link rel="stylesheet" href="style.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="bg-cream">
 
-<body>
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="container nav">
-            <!-- Mobile Menu -->
-            <div class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">
-                ☰
-            </div>
-            <!-- Logo -->
-            <a href="#home" class="brand">
-                SIVA & HERB OILS
-            </a>
-            <!-- Navigation -->
-            <nav id="navLinks">
-                <a class="active" href="index.html">Home</a>
-                <a href="seller.html">About Us</a>
-                <a href="catalog.html">Shop</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-            <!-- Navigation Actions -->
-            <div class="nav-actions">
-                <!-- Search -->
-                <div class="search-container">
-                    <form action="" class="search-form">
-                        <input type="text" name="search" placeholder="Search..." aria-label="Search">
-                        <button type="submit" aria-label="Search">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </form>
-                </div>
-                <!-- Cart -->
-                <a href="add to card .html" class="cart-link" aria-label="Shopping Cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="cart-count">3</span>
-                </a>
-            </div>
+  <!-- Site Preloader Screen -->
+  <div class="site-loader" id="siteLoader">
+    <div class="loader-content">
+      <div class="loader-brand">SIVA &amp; HERB OILS</div>
+      <div class="loader-symbol">
+        <div class="loader-ring"></div>
+        <div class="loader-leaf"><i class="fa-solid fa-leaf"></i></div>
+      </div>
+      <p class="loader-subtitle">RESTORATIVE BOTANICAL SERUM</p>
+      <div class="loader-line"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Announcement Ribbon -->
+  <div class="announcement">
+    <i class="fa-solid fa-leaf text-gold"></i>
+    <span>Complimentary Express Shipping on orders over ₹999</span>
+    <span class="announcement-bullet">•</span>
+    <span>Use Code <strong>PURE15</strong> for 15% Off Your Order</span>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <div class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">
+        ☰
+      </div>
+
+      <a href="index.html" class="brand">
+        <i class="fa-solid fa-spa brand-icon"></i>
+        <span>SIVA &amp; HERB OILS</span>
+      </a>
+
+      <nav id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="seller.html">About Us</a>
+        <a class="active" href="catalog.html">Shop</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-container">
+          <form action="catalog.html" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Search herbal oils..." aria-label="Search">
+            <button type="submit" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
         </div>
-        <div class="container">
-            <i type="button" style="background-color: rgb(1, 4, 11);">
-                <a href="catalog.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#5985E1">
-                        <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-                    </svg>
-                </a>
-            </i>
+
+        <a href="catalog.html" class="wishlist-link" aria-label="Wishlist" title="View Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="wishlistCount">0</span>
+        </a>
+
+        <a href="cart.html" class="cart-link" aria-label="Shopping Cart" id="headerCartLink" title="View Bag">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container py-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0 small">
+        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+        <li class="breadcrumb-item"><a href="catalog.html" class="text-decoration-none text-muted">Shop</a></li>
+        <li class="breadcrumb-item"><a href="catalog.html?category=skin-care" class="text-decoration-none text-muted">Skin &amp; Face Care</a></li>
+        <li class="breadcrumb-item active text-green fw-semibold" aria-current="page">Oils and Restorative Serum</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Product Detail Section -->
+  <main class="container py-4 mb-5">
+    <div class="bg-white rounded-4 border shadow-sm p-4 p-md-5 mb-5">
+      <div class="row g-5 align-items-start">
+        
+        <!-- Product Gallery -->
+        <div class="col-lg-6">
+          <div class="gallery">
+            <div class="main-image rounded-4 overflow-hidden shadow-sm bg-sage mb-3 position-relative text-center p-3">
+              <span class="card-badge">Popular</span>
+              <button class="heart" aria-label="Add to wishlist" data-product-name="Oils and Restorative Serum" onclick="toggleWishlist(this, 'Oils and Restorative Serum', 329, 'assets/product-5.jpg')">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <img src="assets/product-5.jpg" id="mainProductImg" alt="Oils and Restorative Serum" class="img-fluid rounded-3" style="max-height: 440px; object-fit: contain;">
+            </div>
+
+            <!-- Thumbnail Switcher -->
+            <div class="d-flex gap-2 justify-content-center">
+              <div class="thumbnail active p-1 border rounded-3 bg-white" style="cursor: pointer; width: 75px; height: 75px;">
+                <img src="assets/product-5.jpg" alt="Serum Thumb 1" class="w-100 h-100 object-fit-cover rounded-2">
+              </div>
+              <div class="thumbnail p-1 border rounded-3 bg-white" style="cursor: pointer; width: 75px; height: 75px;">
+                <img src="assets/product-8.jpg" alt="Serum Thumb 2" class="w-100 h-100 object-fit-cover rounded-2">
+              </div>
+              <div class="thumbnail p-1 border rounded-3 bg-white" style="cursor: pointer; width: 75px; height: 75px;">
+                <img src="assets/hero-bottle.jpg" alt="Serum Thumb 3" class="w-100 h-100 object-fit-cover rounded-2">
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
-    <main class="container">
-        <!-- PRODUCT SECTION -->
-        <section class="product-section" id="p2">
-            <!-- PRODUCT GALLERY -->
-            <div class="gallery">
-                <div class="main-image">
-                    <span class="product-badge">Herbal</span>
-                     <img src="assets/Screenshot 2026-09-10 103918.png" alt="Pure Neem Oil">
-             </div>
-                <div class="thumbnails">
-                    <div class="thumbnail active">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaXjmBxY83Z-6Qd7rOu9Op0nMNrSuhd0w-Yti0HnN7UBRlqNcu_VHIeHKo&s=10" alt="Coconut Oil">
-                    </div>
-                    <div class="thumbnail">
-                        <img src=" https://tiimg.tistatic.com/fp/2/010/055/neem-oil-702.jpg"
-                            alt="Coconut Oil">
-                    </div>
-                    <div class="thumbnail">
-                        <img src=" https://m.media-amazon.com/images/I/714igodGg9L._AC_UF350,350_QL80_.jpg" alt="Coconut Oil">
-                    </div>
-                    <div class="thumbnail">
-                        <img src="assets/Screenshot 2026-09-10 103918.png" alt="Pure Neem Oil">
-             </div>
-                </div>
-                <p class="image-caption">
-                    Hibiscus Revitalizing Oil
-                </p>
+
+        <!-- Product Information -->
+        <div class="col-lg-6">
+          <span class="text-uppercase tracking-wider text-gold fw-bold small">Face &amp; Decolletage Radiance</span>
+          <h1 class="font-serif display-6 fw-bold text-green mt-1 mb-2">Oils and Restorative Serum</h1>
+          
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="text-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <span class="fw-bold">4.8</span>
+            <span class="text-muted small">(112 verified reviews)</span>
+            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill ms-2">Antioxidant Rich</span>
+          </div>
+
+          <div class="d-flex align-items-baseline gap-3 mb-4">
+            <h2 class="text-green fw-bold mb-0 font-serif" id="detailProductPrice">₹329</h2>
+            <del class="text-muted fs-5">₹420</del>
+            <span class="badge bg-gold text-dark fw-bold rounded-pill">Save 22%</span>
+          </div>
+
+          <p class="text-muted mb-4 lead" style="font-size: 15px;">
+            A feather-light golden elixir formulated with cold-pressed rosehip seed oil, wild sea buckthorn berries, plant-derived squalene, and pure Kashmiri saffron. Restores luminous skin texture and fades hyperpigmentation without clogging pores.
+          </p>
+
+          <!-- Select Size -->
+          <div class="mb-4">
+            <label class="fw-bold small d-block mb-2">Choose Volume Size:</label>
+            <div class="d-flex flex-wrap gap-2 sizes">
+              <button type="button" class="btn btn-outline-dark btn-sm rounded-pill size active px-3 py-2 fw-semibold">50 ML</button>
+              <button type="button" class="btn btn-outline-dark btn-sm rounded-pill size px-3 py-2 fw-semibold">100 ML</button>
+              <button type="button" class="btn btn-outline-dark btn-sm rounded-pill size px-3 py-2 fw-semibold">200 ML</button>
             </div>
-            <!-- PRODUCT INFORMATION -->
-            <div class="product-information">
-                <span class="collection">
-                    Hair & skin Care
-                </span>
-                <h1>
-                    Pure Neem  Oil
-                </h1>
-                <div class="product-price">
-                    ₹279
-                </div>
-                <p class="shipping-text">
-                    Available in all major cities.
-                    Free shipping on orders over ₹999.
-                </p>
-                <!-- SIZE -->
-                <div class="size-header">
-                    <span>Select Size</span>
-                </div>
-                <div class="sizes">
-                    <span class="size active">50 ML</span>
-                    <span class="size">100 ML</span>
-                    <span class="size">500 ML</span>
-                </div>
-                <!-- BUTTONS -->
-                <div class="action-buttons">
+          </div>
 
-                    <a href="#" class="wishlist-btn">
-                        <i class="fa-solid fa-heart"></i>
-                        WISHLIST
-                    </a>
-
-                    <a href=".html" class="buy-btn">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        BUY NOW
-                    </a>
-
-                </div>
-
-                <!-- PRODUCT DETAILS -->
-                <div class="product-details">
-                    <h3>PRODUCT DETAILS</h3>
-                    <p>
-                         Herbal neem oil prepared for natural personal-care routines.
-                     </p>
-                    <h3>BENEFITS</h3>
-                    <ul>
-                        <li>100% natural ingredients</li>
-                        <li>Cold pressed extraction</li>
-                        <li>No artificial additives</li>
-                    
-                    </ul>
-                    <h3>SUITABLE FOR</h3>
-                    <p>
-                        hair care, skin care and
-                        everyday natural wellness routines.
-                    </p>
-                </div>
+          <!-- Quantity & Purchase Actions -->
+          <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+            <div class="input-group" style="width: 125px;">
+              <button class="btn btn-outline-secondary" type="button" onclick="adjustDetailQty(-1)">-</button>
+              <input type="number" id="detailQtyInput" class="form-control text-center fw-bold bg-white" value="1" min="1" readonly>
+              <button class="btn btn-outline-secondary" type="button" onclick="adjustDetailQty(1)">+</button>
             </div>
-        </section>
-        <!-- FEATURES -->
-        <section class="features">
-            <div class="feature">
-                <i class="fa-solid fa-truck"></i>
-                <div>
-                    <h3>Free Shipping</h3>
-                    <p>Free delivery on orders over ₹999</p>
-                </div>
+            
+            <button type="button" class="btn btn-green flex-grow-1 py-3 rounded-pill fw-bold shadow-sm" id="detailAddCartBtn">
+              <i class="fa-solid fa-cart-shopping me-2"></i> Add to Bag
+            </button>
+
+            <button type="button" class="btn btn-gold text-dark py-3 px-4 rounded-pill fw-bold shadow-sm" id="detailBuyNowBtn">
+              Buy Now
+            </button>
+          </div>
+
+          <div class="bg-sage p-3 rounded-3 small mb-4">
+            <div class="d-flex align-items-center gap-2 text-dark mb-1">
+              <i class="fa-solid fa-truck-fast text-green"></i>
+              <strong>Free Express Shipping on orders above ₹999</strong>
             </div>
-            <div class="feature">
-                <i class="fa-solid fa-rotate-left"></i>
-                <div>
-                    <h3>Easy Returns</h3>
-                    <p>Easy return within 7 days</p>
+            <div class="text-muted" style="font-size: 12px;">Delivered in UV-protective ultraviolet glass with calibrated glass pipette dropper.</div>
+          </div>
+
+          <!-- Accordion Details -->
+          <div class="accordion accordion-flush" id="productInfoAccordion">
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold text-green" type="button" data-bs-toggle="collapse" data-bs-target="#accIngredients">
+                  <i class="fa-solid fa-seedling me-2 text-gold"></i> Botanical Radiance Actives
+                </button>
+              </h2>
+              <div id="accIngredients" class="accordion-collapse collapse" data-bs-parent="#productInfoAccordion">
+                <div class="accordion-body small text-muted">
+                  Rosehip Seed (Rosa Canina), Olive Squalane, Kashmiri Mongra Saffron (Crocus Sativus), Sandalwood essential oil, and Vitamin E tocopherols.
                 </div>
-            </div>
-            <div class="feature">
-                <i class="fa-solid fa-shield-halved"></i>
-                <div>
-                    <h3>Secure Shopping</h3>
-                    <p>Safe and secure checkout</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SIMILAR PRODUCTS -->
-        <section class="similar-products">
-            <h2>Similar Products</h2>
-            <div class="similar-grid">
-                <!-- PRODUCT 1 -->
-                <article class="similar-card">
-                    <div class="similar-image">
-                        <img src="assets/product-5.jpg" alt="Oils and Serum">
-                        <span class="badge">Popular</span>
-                        <a href="#" class="heart">♡</a>
-                    </div>
-                    <div class="similar-info">
-                        <span class="category">
-                            HERB OIL
-                        </span>
-
-                        <h3>
-                            Oils and Serum
-                        </h3>
-
-                        <p>
-                            Restorative hair &amp; body oil and
-                            face &amp; body serum.
-                        </p>
-
-                        <div class="rating">
-                            <span>★★★★★</span>
-                            <small>4.8 (98)</small>
-                        </div>
-
-                        <div class="card-bottom">
-                            <strong>₹329</strong>
-
-                            <a href="p2.html" class="card-buy">
-                                Buy Now
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- PRODUCT 2 -->
-                <article class="similar-card">
-
-                    <div class="similar-image">
-                        <img src="assets/Screenshot 2026-09-10 103944.png" alt="Cold Pressed Sesame Oil">
-                        <span class="badge natural">Natural</span>
-                        <a href="#" class="heart">♡</a>
-                    </div>
-
-                    <div class="similar-info">
-
-                        <span class="category">
-                            COOKING OIL
-                        </span>
-
-                        <h3>
-                            Cold Pressed Sesame Oil
-                        </h3>
-
-                        <p>
-                            Traditionally extracted sesame oil
-                            with a warm nutty flavour.
-                        </p>
-
-                        <div class="rating">
-                            <span>★★★★★</span>
-                            <small>4.9 (87)</small>
-                        </div>
-
-                        <div class="card-bottom">
-                            <strong>₹349</strong>
-
-                            <a href="p3.html" class="card-buy">
-                                Buy Now
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- PRODUCT 3 -->
-                <article class="similar-card">
-
-                    <div class="similar-image">
-                        <img src="assets/product-3.jpg" alt="Hibiscus Revitalizing Oil">
-                        <span class="badge">New</span>
-                        <a href="#" class="heart">♡</a>
-                    </div>
-
-                    <div class="similar-info">
-
-                        <span class="category">
-                            HAIR CARE
-                        </span>
-
-                        <h3>
-                            Hibiscus Revitalizing Oil
-                        </h3>
-
-                        <p>
-                            Nourishes your scalp and hair
-                            naturally.
-                        </p>
-
-                        <div class="rating">
-                            <span>★★★★★</span>
-                            <small>4.8 (64)</small>
-                        </div>
-
-                        <div class="card-bottom">
-                            <strong>₹249</strong>
-
-                            <a href="p4.html" class="card-buy">
-                                Buy Now
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- PRODUCT 4 -->
-                <article class="similar-card">
-
-                    <div class="similar-image">
-                        <img src="assets/Screenshot 2026-09-10 103918.png" alt="Pure Neem Oil">
-                        <span class="badge herbal">Herbal</span>
-                        <a href="#" class="heart">♡</a>
-                    </div>
-
-                    <div class="similar-info">
-
-                        <span class="category">
-                            SKIN CARE
-                        </span>
-
-                        <h3>
-                            Pure Neem Oil
-                        </h3>
-                        <p>
-                            Herbal neem oil prepared for
-                            natural personal care.
-                        </p>
-
-                        <div class="rating">
-                            <span>★★★★★</span>
-                            <small>4.7 (52)</small>
-                        </div>
-
-                        <div class="card-bottom">
-                            <strong>₹279</strong>
-
-                            <a href="p5.html" class="card-buy">
-                                Buy Now
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
+              </div>
             </div>
 
-        </section>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold text-green" type="button" data-bs-toggle="collapse" data-bs-target="#accUsage">
+                  <i class="fa-solid fa-spa me-2 text-gold"></i> Night Renewal Ritual
+                </button>
+              </h2>
+              <div id="accUsage" class="accordion-collapse collapse" data-bs-parent="#productInfoAccordion">
+                <div class="accordion-body small text-muted">
+                  Warm 3-4 drops between clean fingertips and press gently into cleansed face, neck, and chest. Use upwards sweeping motions for natural lymphatic drainage.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    </main>
+      </div>
+    </div>
 
+    <!-- Related Products -->
+    <section>
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <span class="text-uppercase tracking-wider text-gold fw-bold small">Botanical Pairings</span>
+          <h3 class="font-serif fw-bold text-green mb-0">Recommended for Complete Care</h3>
+        </div>
+        <a href="catalog.html" class="btn btn-outline-green btn-sm rounded-pill">View All Oils →</a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4 col-sm-6">
+          <article class="product-card h-100">
+            <span class="card-badge">Bestseller</span>
+            <div class="card-img-wrap" style="height: 220px;">
+              <img src="assets/product-1.jpg" alt="Coconut Oil" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="product-info p-3">
+              <h5 class="product-title font-serif fw-bold"><a href="p1.html" class="text-decoration-none text-dark">Cold Pressed Coconut Oil</a></h5>
+              <b class="product-price text-green">₹ 299.00</b>
+              <button type="button" class="btn btn-green btn-sm rounded-pill w-100 mt-3" onclick="addToCart('Cold Pressed Coconut Oil', 299, 'assets/product-1.jpg')">
+                + Add to Bag
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <article class="product-card h-100">
+            <span class="card-badge gold">Herbal Blend</span>
+            <div class="card-img-wrap" style="height: 220px;">
+              <img src="assets/product-2.jpg" alt="Amla Hair Oil" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="product-info p-3">
+              <h5 class="product-title font-serif fw-bold"><a href="p2.html" class="text-decoration-none text-dark">Amla &amp; Brahmi Hair Oil</a></h5>
+              <b class="product-price text-green">₹ 499.00</b>
+              <button type="button" class="btn btn-green btn-sm rounded-pill w-100 mt-3" onclick="addToCart('Amla & Brahmi Hair Oil', 499, 'assets/product-2.jpg')">
+                + Add to Bag
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <article class="product-card h-100">
+            <span class="card-badge gold">Luxury Care</span>
+            <div class="card-img-wrap" style="height: 220px;">
+              <img src="assets/product-6.jpg" alt="Intensive Hair Oil" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="product-info p-3">
+              <h5 class="product-title font-serif fw-bold"><a href="p4.html" class="text-decoration-none text-dark">Intensive Hair Care Oil</a></h5>
+              <b class="product-price text-green">₹ 399.00</b>
+              <button type="button" class="btn btn-green btn-sm rounded-pill w-100 mt-3" onclick="addToCart('Intensive Hair Care Oil', 399, 'assets/product-6.jpg')">
+                + Add to Bag
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-box company">
+        <a href="index.html" class="footer-brand text-decoration-none">
+          <i class="fa-solid fa-spa"></i>
+          <span>SIVA &amp; HERB OILS</span>
+        </a>
+        <p>Crafted with traditional patience and botanical purity to bring authentic wellness into your everyday rituals.</p>
+      </div>
+
+      <div class="footer-box">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="seller.html">About Our Process</a>
+        <a href="catalog.html">Shop Catalog</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Customer Care</h4>
+        <a href="cart.html">View Shopping Bag</a>
+        <a href="productcheckout.html">Checkout</a>
+        <a href="catalog.html">Wishlist</a>
+        <a href="contact.html">Order Inquiries</a>
+      </div>
+
+      <div class="footer-box payment-box">
+        <h4>Accepted Payments</h4>
+        <div class="payments">
+          <span>UPI</span>
+          <span>VISA</span>
+          <span>Mastercard</span>
+          <span>RuPay</span>
+          <span>COD</span>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 SIVA &amp; HERB OILS. All rights reserved. Handcrafted botanical wellness.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
-
 </html>

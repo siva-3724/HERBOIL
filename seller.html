@@ -26,44 +26,41 @@
         ☰
       </div>
       <!-- Logo -->
-      <a href="#home" class="brand">
-        SIVA & HERB OILS
+      <a href="index.html" class="brand">
+        SIVA &amp; HERB OILS
       </a>
 
       <!-- Navigation -->
       <nav id="navLinks">
-        <a class="active" href="index.html">Home</a>
-        <a href="seller.html">About Us</a>
+        <a href="index.html">Home</a>
+        <a class="active" href="seller.html">About Us</a>
         <a href="catalog.html">Shop</a>
         <a href="contact.html">Contact Us</a>
       </nav>
 
       <!-- Navigation Actions -->
       <div class="nav-actions">
-
         <!-- Search -->
         <div class="search-container">
-          <form action="" class="search-form">
-
-            <input type="text" name="search" placeholder="Search..." aria-label="Search">
-
+          <form action="catalog.html" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Search herbal oils..." aria-label="Search">
             <button type="submit" aria-label="Search">
-              <i class="fa fa-search"></i>
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-
           </form>
         </div>
 
-
-        <!-- Cart -->
-        <a href="add to card .html" class="cart-link" aria-label="Shopping Cart">
-
-          <i class="fa-solid fa-cart-shopping"></i>
-
-          <span class="cart-count">3</span>
-
+        <!-- Wishlist -->
+        <a href="catalog.html" class="wishlist-link" aria-label="Wishlist" title="View Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="wishlistCount">0</span>
         </a>
 
+        <!-- Cart -->
+        <a href="cart.html" class="cart-link" aria-label="Shopping Cart" id="headerCartLink" title="View Bag">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
       </div>
     </div>
   </header>

@@ -1,1420 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium natural oils product catalogue">
-  <title>SIVA & HERB OILS</title>
-  <link rel="stylesheet" href="s.css">
-  
-  <!-- Google Font --> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore our authentic traditional cold-pressed herbal, hair, and cooking oils. Handcrafted with purity and care." />
+  <title>Shop Botanical Oils | SIVA & HERB OILS</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Playfair+Display:ital,wght@0,500..800;1,500..800&display=swap" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet">
-
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <style>
 
-/* =====================================
-   NAV ACTIONS
-===================================== */
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-
-  flex-shrink: 0;
-}
-
-
-/* =====================================
-   SEARCH
-===================================== */
-
-.search-container {
-  display: flex;
-  align-items: center;
-}
-
-.search-form {
-  width: 210px;
-  height: 40px;
-
-  display: flex;
-  align-items: center;
-
-  border: 1px solid #ddd;
-  border-radius: 25px;
-
-  background: #fff;
-
-  overflow: hidden;
-
-  transition: 0.3s ease;
-}
-
-.search-form:focus-within {
-  border-color: blueviolet;
-
-  box-shadow:
-    0 0 0 3px rgba(138, 43, 226, 0.10);
-}
-
-
-/* Search input */
-
-.search-form input {
-  width: 100%;
-  height: 100%;
-
-  padding: 0 13px;
-
-  border: none;
-  outline: none;
-
-  background: transparent;
-
-  color: #333;
-  font-size: 14px;
-}
-
-.search-form input::placeholder {
-  color: #999;
-}
-
-
-/* Search button */
-
-.search-form button {
-  width: 42px;
-  height: 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-
-  background: transparent;
-
-  color: #555;
-
-  cursor: pointer;
-
-  transition: 0.3s ease;
-}
-
-.search-form button:hover {
-  color: blueviolet;
-}
-
-
-/* =====================================
-   CART
-===================================== */
-
-.cart-link {
-  position: relative;
-
-  width: 42px;
-  height: 42px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: #f7f1fb;
-
-  color: #333;
-
-  text-decoration: none;
-
-  transition: all 0.3s ease;
-}
-
-
-/* Cart icon */
-
-.cart-link i {
-  font-size: 17px;
-}
-
-
-/* Cart hover */
-
-.cart-link:hover {
-  background:  #2C4A3E;
-  color: #fff;
-
-  transform: translateY(-2px);
-}
-
-
-/* =====================================
-   CART COUNT
-===================================== */
-
-.cart-count {
-  position: absolute;
-
-  top: -5px;
-  right: -5px;
-
-  width: 19px;
-  height: 19px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: #c69d36;
-  color: #fff;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  border: 2px solid #fff;
-}
-
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 850px) {
-
-  .nav-actions {
-    gap: 8px;
-  }
-
-  /* Search becomes icon */
-
-  .search-form {
-    width: 42px;
-    height: 42px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: #f7f1fb;
-  }
-
-  .search-form input {
-    display: none;
-  }
-
-  .search-form button {
-    width: 42px;
-    height: 42px;
-
-    color: #333;
-  }
-
-  .search-form button:hover {
-    color:  #2C4A3E;
-  }
-
-  /* Cart */
-
-  .cart-link {
-    width: 42px;
-    height: 42px;
-  }
-}
-
-
-/* =====================================
-   SMALL MOBILE
-===================================== */
-
-@media (max-width: 480px) {
-
-  .nav-actions {
-    gap: 6px;
-  }
-
-  .search-form,
-  .search-form button,
-  .cart-link {
-    width: 38px;
-    height: 38px;
-  }
-
-  .search-form button {
-    font-size: 14px;
-  }
-
-  .cart-link i {
-    font-size: 15px;
-  }
-
-  .cart-count {
-    width: 17px;
-    height: 17px;
-
-    top: -4px;
-    right: -4px;
-
-    font-size: 9px;
-  }
-}
-    /* =========================
-       TOP BAR
-    ========================= */
-    .topnav .search-container button {
-      float: right;
-      padding: 6px 10px;
-      margin-top: 8px;
-      margin-right: 16px;
-      background: #081e02;
-      font-size: 17px;
-      border: solid 1px black;
-      cursor: pointer;
-    }
-
-    .topnav input[type=text] {
-      padding: 6px;
-      margin-top: 8px;
-      font-size: 17px;
-      border: solid 1px black;
-    }
-
-    .top-bar {
-      background: #293426;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-      font-size: 13px;
-      letter-spacing: .5px;
-    }
-
-    .top-bar span {
-      color: #d7c08b;
-      font-weight: 700;
-    }
-
-
-    /* =========================
-       CATALOGUE INTRO
-    ========================= */
-
-    .catalogue-intro {
-      padding: 70px 0 30px;
-      text-align: center;
-    }
-
-    .catalogue-intro h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
-
-    .catalogue-intro p {
-      max-width: 680px;
-      margin: auto;
-      color: #73756b;
-    }
-
-
-    /* =========================
-       CATEGORY FILTER
-    ========================= */
-
-    .categories {
-      padding: 30px 0 45px;
-    }
-
-    .category-list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    /* Category Button */
-
-    .category {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      min-height: 42px;
-      padding: 11px 20px;
-
-      border: 1px solid #d6d0c0;
-      border-radius: 50px;
-
-      background: transparent;
-      color: #52564b;
-
-      font-size: 13px;
-      font-weight: 600;
-      line-height: 1.2;
-
-      text-align: center;
-      white-space: nowrap;
-
-      text-decoration: none;
-
-      transition: all 0.3s ease;
-    }
-
-    .category:hover,
-    .category.active {
-      background: #293426;
-      border-color: #293426;
-      color: #fff;
-
-      text-decoration: none;
-    }
-
-    /* =========================
-   TABLET
-========================= */
-
-    @media (max-width: 768px) {
-
-      .categories {
-        padding: 25px 0 35px;
-      }
-
-      .category-list {
-        gap: 10px;
-        padding: 0 15px;
-      }
-
-      .category {
-        min-height: 40px;
-        padding: 10px 17px;
-        font-size: 12px;
-      }
-    }
-
-    /* =========================
-   MOBILE
-========================= */
-
-    @media (max-width: 576px) {
-
-      .categories {
-        padding: 20px 0 30px;
-      }
-
-      .category-list {
-        gap: 8px;
-        padding: 0 10px;
-      }
-
-      .category {
-        min-height: 38px;
-        padding: 9px 14px;
-        font-size: 11px;
-      }
-    }
-
-    /* =========================
-   SMALL MOBILE
-========================= */
-
-    @media (max-width: 400px) {
-
-      .category-list {
-        gap: 7px;
-      }
-
-      .category {
-        min-height: 36px;
-        padding: 8px 12px;
-        font-size: 10px;
-      }
-    }
-
-    /* =========================
-       FEATURED BANNER
-    ========================= */
-
-    .offer-banner {
-      margin: 10px 0 65px;
-      background: #ded6bf;
-      padding: 28px 35px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .offer-text small {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: blueviolet;
-      font-weight: 700;
-    }
-
-    .offer-text h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 28px;
-      margin-top: 4px;
-    }
-
-    .offer-text p {
-      color: #65665e;
-      font-size: 14px;
-    }
-
-    .offer-button {
-      background: #293426;
-      color: white;
-      padding: 13px 22px;
-      white-space: nowrap;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-
-    /* =========================
-       PRODUCT SECTION
-    ========================= */
-
-    .products-section {
-      padding-bottom: 90px;
-    }
-
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      margin-bottom: 30px;
-      gap: 20px;
-    }
-
-    .section-heading h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 40px;
-    }
-
-    .section-heading p {
-      color: #77796f;
-      font-size: 14px;
-    }
-
-
-    /* =========================
-       PRODUCT GRID
-    ========================= */
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .product-card {
-      background: #fff;
-      border: 1px solid gray;
-      overflow: hidden;
-      position: relative;
-      transition: .35s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 18px 35px rgba(41, 52, 38, .10);
-    }
-
-    .product-image {
-      height: 275px;
-      background: #ece8dc;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: .5s;
-    }
-
-    .product-card:hover .product-image img {
-      transform: scale(1.06);
-    }
-
-    .badge {
-      position: absolute;
-      left: 12px;
-      top: 12px;
-      background: #a35435;
-      color: white;
-      padding: 6px 10px;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 700;
-    }
-
-    .badge.green {
-      background: #526344;
-    }
-
-    .heart {
-      position: absolute;
-      right: 12px;
-      top: 12px;
-      width: 37px;
-      height: 37px;
-      border-radius: 50%;
-      border: none;
-      background: rgba(255, 255, 255, .9);
-      color: #293426;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .product-info {
-      padding: 18px;
-    }
-
-    .product-category {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: blueviolet;
-      font-weight: 700;
-    }
-
-    .product-name {
-      font-family: "Playfair Display", serif;
-      font-size: 21px;
-      margin: 5px 0 7px;
-    }
-
-    .product-description {
-      font-size: 12px;
-      color: #77796f;
-      min-height: 42px;
-    }
-
-    .rating {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      margin: 13px 0;
-      font-size: 12px;
-    }
-
-    .stars {
-      color: #c69d36;
-      letter-spacing: 2px;
-    }
-
-    .price-row {
-      border-top: 1px solid #eeeae0;
-      padding-top: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .price {
-      font-size: 19px;
-      font-weight: 700;
-      color: #293426;
-    }
-
-    .old-price {
-      font-size: 12px;
-      color: #999;
-      text-decoration: line-through;
-      margin-left: 4px;
-    }
-
-    button {
-      padding: 11px 22px;
-      background-color: #062304;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    /* =========================
-       CATALOGUE INFO
-    ========================= */
-
-    .info-section {
-      margin: auto;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 65px;
-      align-items: center;
-    }
-
-    .info-image {
-      height: 470px;
-      overflow: hidden;
-    }
-
-    .info-image img {
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .info-content .small-label {
-      color: blueviolet;
-    }
-
-    .info-content h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 44px;
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
-
-    .info-content p {
-      color: #707269;
-      margin-bottom: 20px;
-    }
-
-    .info-list {
-      list-style: none;
-      margin-top: 25px;
-    }
-
-    .info-list li {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 13px;
-      font-size: 14px;
-    }
-
-    .info-list i {
-      color: blueviolet;
-      margin-top: 5px;
-    }
-
-
-
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1000px) {
-
-      .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .quality-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-    }
-
-
-    @media (max-width: 760px) {
-
-      .navbar {
-        min-height: 70px;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .catalogue-hero {
-        padding: 65px 0;
-      }
-
-      .catalogue-intro h2,
-      .section-heading h2,
-      .quality-heading h2 {
-        font-size: 33px;
-      }
-
-      .offer-banner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-      }
-
-      .product-image {
-        height: 220px;
-      }
-
-      .product-info {
-        padding: 14px;
-      }
-
-      .product-name {
-        font-size: 18px;
-      }
-
-      .info-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .info-image {
-        height: 350px;
-      }
-
-    }
-
-
-    @media (max-width: 480px) {
-
-      .container {
-        width: 90%;
-      }
-
-      .logo {
-        font-size: 24px;
-      }
-
-      .nav-icon {
-        width: 37px;
-        height: 37px;
-      }
-
-      .catalogue-hero h1 {
-        font-size: 43px;
-      }
-
-      .product-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .product-image {
-        height: 300px;
-      }
-
-      .quality-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .info-content h2 {
-        font-size: 35px;
-      }
-
-    }
-  </style>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="bg-cream">
 
-<body>
-  <!-- =========================
-       TOP BAR
-  ========================== -->
-  <div class="top-bar">
-    Natural products made with care —
-    <span>Free delivery above ₹999</span>
+  <!-- Site Preloader Screen -->
+  <div class="site-loader" id="siteLoader">
+    <div class="loading-leaf leaf-1"><i class="fa-solid fa-leaf"></i></div>
+    <div class="loading-leaf leaf-2"><i class="fa-solid fa-leaf"></i></div>
+    <div class="loader-content">
+      <div class="loader-brand">SIVA &amp; HERB OILS</div>
+      <div class="loader-symbol">
+        <div class="loader-ring"></div>
+        <div class="loader-leaf"><i class="fa-solid fa-leaf"></i></div>
+      </div>
+      <p class="loader-subtitle">CURATING BOTANICAL FORMULATIONS</p>
+      <div class="loader-line"><span></span></div>
+      <p class="loader-text">Loading handcrafted catalog...</p>
+    </div>
   </div>
 
-  <!---navbar-->
-  <header class="site-header">
+  <!-- Announcement Ribbon -->
+  <div class="announcement">
+    <i class="fa-solid fa-leaf text-gold"></i>
+    <span>Complimentary Express Shipping on orders over ₹999</span>
+    <span class="announcement-bullet">•</span>
+    <span>Use Code <strong>PURE15</strong> for 15% Off Your First Order</span>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" id="siteHeader">
     <div class="container nav">
-
-      <!-- Mobile Menu -->
-      <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">
+      <!-- Mobile Menu Toggle -->
+      <div class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">
         ☰
-      </button>
+      </div>
 
-      <!-- Logo -->
-      <a href="#home" class="brand">
-        SIVA & HERB OILS
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand">
+        <i class="fa-solid fa-spa brand-icon"></i>
+        <span>SIVA &amp; HERB OILS</span>
       </a>
 
-      <!-- Navigation -->
+      <!-- Navigation Links -->
       <nav id="navLinks">
-        <a class="active" href="index.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="seller.html">About Us</a>
-        <a href="catalog.html">Shop</a>
+        <a class="active" href="catalog.html">Shop</a>
         <a href="contact.html">Contact Us</a>
       </nav>
 
       <!-- Navigation Actions -->
       <div class="nav-actions">
+        <!-- Search Bar with Live Autocomplete -->
+        <div class="search-container">
+          <form action="catalog.html" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Search herbal oils..." aria-label="Search">
+            <button type="submit" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
 
-  <!-- Search -->
-  <div class="search-container">
-    <form action="" class="search-form">
+        <!-- Wishlist Link -->
+        <a href="catalog.html" class="wishlist-link" aria-label="Wishlist" title="View Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="wishlistCount">0</span>
+        </a>
 
-      <input
-        type="text"
-        name="search"
-        placeholder="Search..."
-        aria-label="Search">
-
-      <button type="submit" aria-label="Search">
-        <i class="fa fa-search"></i>
-      </button>
-
-    </form>
-  </div>
-
-
-  <!-- Cart -->
-  <a href="add to card .html" class="cart-link" aria-label="Shopping Cart">
-
-    <i class="fa-solid fa-cart-shopping"></i>
-
-    <span class="cart-count">3</span>
-
-  </a>
-
-</div>
-
+        <!-- Cart Link with Live Counter -->
+        <a href="cart.html" class="cart-link" aria-label="Shopping Cart" id="headerCartLink" title="View Bag">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- =========================
-       INTRO
-  ========================== -->
-
-  <section class="catalogue-intro" id="catalogue">
-    <div class="container">
-      <h2>Natural products for everyday life</h2>
-      <p>
-        From traditional wood-pressed oils to nourishing hair
-        and skincare essentials, every product is created with
-        simple ingredients and thoughtful craftsmanship.
+  <!-- Hero Header Banner -->
+  <section class="bg-green text-white py-5 text-center position-relative overflow-hidden">
+    <div class="container position-relative z-1 py-4">
+      <span class="badge bg-gold text-dark fw-bold px-3 py-2 rounded-pill mb-3 text-uppercase tracking-wider">
+        <i class="fa-solid fa-seedling me-1"></i> 100% Traditional Cold-Pressed
+      </span>
+      <h1 class="font-serif display-4 fw-bold mb-3">Our Botanical Collection</h1>
+      <p class="lead text-light opacity-90 mx-auto" style="max-width: 650px;">
+        Thoughtfully prepared herbal formulations, restorative hair elixirs, and nutrient-dense cooking oils extracted without artificial heat or chemicals.
       </p>
+
+      <!-- Breadcrumbs -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-0 small opacity-75">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item active text-gold fw-semibold" aria-current="page">Catalog</li>
+        </ol>
+      </nav>
     </div>
   </section>
 
-  <!-- =========================
-       CATEGORIES
-  ========================== -->
+  <!-- Main Shop Section -->
+  <main class="container py-5">
+    <div class="row g-4">
+      
+      <!-- Left Column: Interactive Filter Sidebar -->
+      <aside class="col-lg-3">
+        <div class="catalog-sidebar shadow-sm mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+            <h5 class="font-serif fw-bold text-green mb-0">Filters</h5>
+            <button type="button" class="btn btn-link text-muted small p-0 text-decoration-none" id="resetFiltersBtn">
+              Reset All
+            </button>
+          </div>
 
-  <section class="categories">
+          <!-- Keyword Search in Catalog -->
+          <div class="mb-4">
+            <label class="form-label small fw-bold text-dark mb-2">Search Catalog</label>
+            <div class="input-group input-group-sm">
+              <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+              <input type="text" id="catalogSearchInput" class="form-control border-start-0" placeholder="Filter by herb or oil...">
+            </div>
+          </div>
 
-    <div class="container">
+          <!-- Category Filter Pills -->
+          <div class="mb-4">
+            <label class="form-label small fw-bold text-dark mb-2">Categories</label>
+            <div class="d-flex flex-column">
+              <a href="#" class="catalog-cat-filter active" data-category="all">
+                <span>All Botanical Oils</span>
+                <span class="badge bg-light text-dark rounded-pill">8</span>
+              </a>
+              <a href="#" class="catalog-cat-filter" data-category="hair-care">
+                <span>Herbal Hair Care</span>
+                <span class="badge bg-light text-dark rounded-pill">4</span>
+              </a>
+              <a href="#" class="catalog-cat-filter" data-category="skin-care">
+                <span>Skin &amp; Radiance Care</span>
+                <span class="badge bg-light text-dark rounded-pill">2</span>
+              </a>
+              <a href="#" class="catalog-cat-filter" data-category="cooking">
+                <span>Cooking &amp; Edible Oils</span>
+                <span class="badge bg-light text-dark rounded-pill">2</span>
+              </a>
+            </div>
+          </div>
 
-      <div class="category-list">
+          <!-- Price Range Slider -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <label class="form-label small fw-bold text-dark mb-0">Max Price</label>
+              <span class="fw-bold text-green small" id="catalogPriceVal">₹1200</span>
+            </div>
+            <input type="range" class="form-range range-slider-green" id="catalogPriceRange" min="150" max="1200" step="50" value="1200">
+            <div class="d-flex justify-content-between text-muted small" style="font-size: 11px;">
+              <span>₹150</span>
+              <span>₹1200</span>
+            </div>
+          </div>
 
-        <a href="#oils" class="category active">
-          All Products
-        </a>
+          <!-- Special Promotion Banner -->
+          <div class="bg-sage p-3 rounded-3 text-center border">
+            <span class="text-uppercase tracking-wider text-gold fw-bold" style="font-size: 10px;">Limited Offer</span>
+            <h6 class="font-serif fw-bold text-green mt-1 mb-2">Buy 2 &amp; Save 15%</h6>
+            <p class="text-muted small mb-2" style="font-size: 12px;">Apply code <strong>PURE15</strong> at checkout for an instant 15% discount on all formulations.</p>
+            <a href="cart.html" class="btn btn-green btn-sm rounded-pill w-100 py-1 font-xs">View Bag</a>
+          </div>
+        </div>
+      </aside>
 
-        <a href="#oils" class="category">
-          Cooking Oils
-        </a>
+      <!-- Right Column: Products Grid & Controls -->
+      <section class="col-lg-9">
+        
+        <!-- Toolbar: Results Count, Sort, and View Toggle -->
+        <div class="bg-white p-3 rounded-4 border shadow-sm mb-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+          <span class="text-muted small" id="catalogResultCount">Showing 8 of 8 natural oils</span>
 
-        <a href="#oils" class="category">
-          Hair Care
-        </a>
+          <div class="d-flex align-items-center gap-3 ms-auto">
+            <!-- Sort Dropdown -->
+            <div class="d-flex align-items-center gap-2">
+              <label for="catalogSortSelect" class="small text-muted text-nowrap mb-0">Sort By:</label>
+              <select class="form-select form-select-sm" id="catalogSortSelect" style="width: 170px;">
+                <option value="featured" selected>Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+                <option value="reviews">Most Reviewed</option>
+              </select>
+            </div>
 
-        <a href="#oils" class="category">
-          Skin Care
-        </a>
+            <!-- View Switcher -->
+            <div class="btn-group btn-group-sm" role="group">
+              <button type="button" class="btn btn-outline-secondary active" id="viewGridBtn" title="Grid View">
+                <i class="fa-solid fa-table-cells-large"></i>
+              </button>
+              <button type="button" class="btn btn-outline-secondary" id="viewListBtn" title="List View">
+                <i class="fa-solid fa-list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
 
-        <a href="#oils" class="category">
-          Wellness
-        </a>
+        <!-- Products Grid Container (Controlled by script.js initCatalogController) -->
+        <div class="row g-4" id="catalogProductGrid">
+          <!-- Fallback or populated by JS -->
+        </div>
 
-      </div>
-
+      </section>
     </div>
+  </main>
 
-  </section>
+  <!-- Quick View Modal Container (Populated dynamically by script.js) -->
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true"></div>
 
-
-  <!-- =========================
-       OFFER
-  ========================== -->
-
-  <div class="container">
-    <div class="offer-banner">
-      <div class="offer-text">
-        <small>Limited Collection</small>
-        <h3>Buy 2 Natural Oils & Save 10%</h3>
-        <p>A simple way to stock your everyday essentials.</p>
-      </div>
-      <a href="#oils">
-        <button>
-          Shop Collection
-        </button>
-      </a>
+  <!-- Floating Toast Notification -->
+  <div class="cart-toast" id="cartToast">
+    <div class="toast-icon-wrap" id="toastIcon">
+      <i class="fa-solid fa-check"></i>
     </div>
+    <div class="toast-body">
+      <strong id="toastTitle">Added to Cart!</strong>
+      <p id="toastMessage">Product added to your shopping bag.</p>
+      <div class="toast-actions" id="toastActions">
+        <a href="cart.html" class="toast-cart-btn">View Bag →</a>
+      </div>
+    </div>
+    <button class="toast-close" onclick="closeToast()" aria-label="Close notification">&times;</button>
   </div>
 
+  <!-- Back to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-  <!-- =========================
-       PRODUCTS
-  ========================== -->
-
-  <section class="products-section" id="oils">
-    <div class="container">
-      <div class="section-heading">
-        <div>
-          <h2>Our Products</h2>
-        </div>
-      </div>
-      <div class="product-grid">
-
-        <!-- PRODUCT 1 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/product-1.jpg" alt="Cold Pressed Coconut Oil">
-            <span class="badge green">Bestseller</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">Cooking Oil</span>
-            <h3 class="product-name">Cold Pressed Coconut Oil</h3>
-            <p class="product-description">
-              Pure coconut oil traditionally extracted for everyday cooking.
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.9 (126)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹299</div>
-
-              <a href="p1.html">
-                <button>
-                  Buy Now 🛒
-                </button>
-              </a>
-
-            </div>
-        </article>
-
-        <!-- PRODUCT 2 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/product-5.jpg" alt="Wood Pressed Groundnut Oil">
-            <span class="badge">Popular</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">HERB Oil</span>
-            <h3 class="product-name">Oils and serum</h3>
-            <p class="product-description">
-              Restorative hair & body oil and face & body serum
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.8 (98)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹329</div>
-
-              <a href="p2.html">
-                <button>
-                  Buy Now 🛒
-                </button>
-              </a>
-            </div>
-        </article>
-
-        <!-- PRODUCT 3 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/Screenshot 2026-09-10 103944.png" alt="Cold Pressed Sesame Oil">
-            <span class="badge green">Natural</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">Cooking Oil</span>
-            <h3 class="product-name">Cold Pressed Sesame Oil</h3>
-            <p class="product-description">
-              Traditionally extracted sesame oil with a warm nutty flavour.
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.9 (87)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹349</div>
-              <a href="p3.html">
-                <button>
-                  Buy Now 🛒
-                </button>
-              </a>
-            </div>
-        </article>
-
-        <!-- PRODUCT 4 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/product-3.jpg" alt="Pure Castor Oil">
-            <span class="badge">New</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">Hair Care</span>
-            <h3 class="product-name">Hibiscus Revitalizing Oil</h3>
-            <p class="product-description">
-              nourish both your scalp and hair.
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.8 (64)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹249</div>
-              <a href="p4.html">
-                <button>
-                  Buy Now 🛒
-                </button>
-              </a>
-
-            </div>
-          </div>
-        </article>
-
-        <!-- PRODUCT 5 -->
-
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/Screenshot 2026-09-10 103918.png" alt="Pure Neem Oil">
-            <span class="badge green">Herbal</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">Skin Care</span>
-            <h3 class="product-name">Pure Neem Oil</h3>
-            <p class="product-description">
-              Herbal neem oil prepared for natural personal-care routines.
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.7 (52)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹279</div>
-           <a href="p5.html">
-                <button>
-                  Buy Now 🛒
-                </button>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRODUCT 6 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/Screenshot 2026-09-10 104034.png" alt="Sweet Almond Oil">
-            <span class="badge">Premium</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">Beauty Oil</span>
-            <h3 class="product-name">Sweet Almond Oil</h3>
-            <p class="product-description">
-              Lightweight almond oil designed for nourishing beauty rituals.
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.9 (73)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹399</div>
-              <button type="button" class="buy-btn">Buy Now 🛒</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRODUCT 7 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/product-6.jpg" alt="Cold Pressed Mustard Oil">
-            <span class="badge green">Traditional</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">herb oils</span>
-            <h3 class="product-name">Warming & Refreshing oils</h3>
-            <p class="product-description">
-              Spice Harmony warming massage oils and forest cleanse refreshing detox oils
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.8 (61)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹319</div>
-              <button type="button" class="buy-btn">Buy Now 🛒</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRODUCT 8 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/product-8.jpg" alt="Herbal Hair Oil">
-            <span class="badge">Favourite</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">TEA TREE OILS</span>
-            <h3 class="product-name">natural essential oil</h3>
-            <p class="product-description">
-              Controls Dandruff an itchy scalp antimicrobial and anti-inflammatory properties
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.9 (112)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹299</div>
-              <button type="button" class="buy-btn">Buy Now 🛒</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRODUCT 9 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/Screenshot 2026-09-10 104117.png" alt="Herbal Hair Oil">
-            <span class="badge green">natural</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">SKIN CARE</span>
-            <h3 class="product-name">Castor oils</h3>
-            <p class="product-description">
-              natural skin hydration and as a short-term remedy for occasional constipation
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.9 (112)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹299</div>
-              <button type="button" class="buy-btn">Buy Now 🛒</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRODUCT 10 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/product-2.jpg" alt="Herbal Hair Oil">
-            <span class="badge">Favourite</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">Amla & Brahmi Nourishing Oil</span>
-            <h3 class="product-name">Nourishing oils</h3>
-            <p class="product-description">
-              his specific blend is formulated for hair and scalp application.
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.9 (112)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹349</div>
-              <button type="button" class="buy-btn">Buy Now 🛒</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRODUCT 11 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/p9.jpg" alt="Herbal Hair Oil">
-            <span class="badge green">traditional</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">Skincare</span>
-            <h3 class="product-name">Jojoba Oil.</h3>
-            <p class="product-description">
-              mimics human sebum, the natural oil produced by your skin
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.9 (112)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹199</div>
-              <button type="button" class="buy-btn">Buy Now 🛒</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRODUCT 12 -->
-        <article class="product-card">
-          <div class="product-image">
-            <img src="assets/Screenshot 2026-09-10 104048.png" alt="Herbal Hair Oil">
-            <span class="badge">Favourite</span>
-            <button class="heart">♡</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">hare care</span>
-            <h3 class="product-name">Bhringraj Oill</h3>
-            <p class="product-description">
-              Supporting Hair Growth,Reducing Hair Fall and Combating Dandruff.
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.9 (112)</span>
-            </div>
-            <div class="price-row">
-              <div class="price">₹349</div>
-              <button type="button" class="buy-btn">Buy Now 🛒</button>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- =========================
-       ABOUT CATALOGUE
-  ========================== -->
-
-  <section class="info-section" id="made">
-    <div class="container">
-      <div class="info-grid">
-
-        <div class="info-image">
-          <img src="assets/watermarked_img_14638677125859379117.jpg" alt="Natural products">
-        </div>
-
-        <div class="info-content">
-          <div class="small-label">Made With Intention</div>
-          <h2>From our ingredients to your home.</h2>
-          <p>
-            NatureNest was created around a simple idea:
-            everyday products should feel honest, natural
-            and thoughtfully made.
-          </p>
-          <p>
-            Our collection brings traditional ingredients
-            and modern presentation together to create
-            products that fit beautifully into everyday life.
-          </p>
-
-          <ul class="info-list">
-            <li>
-              <i class="fa-solid fa-check"></i>
-              Carefully selected raw materials
-            </li>
-            <li>
-              <i class="fa-solid fa-check"></i>
-              Traditional extraction methods
-            </li>
-            <li>
-              <i class="fa-solid fa-check"></i>
-              Thoughtful quality checks
-            </li>
-            <li>
-              <i class="fa-solid fa-check"></i>
-              Secure and hygienic packaging
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
-  <!---contact-->
+  <!-- Site Footer -->
   <footer id="contact">
     <div class="footer-container">
-
-      <!-- Company -->
       <div class="footer-box company">
-        <h2>SIVA &amp; HERB OILS</h2>
-        <p>
-          Crafted with passion and elegance to bring you timeless fragrances
-          that leave a lasting impression.
-        </p>
-        <p>☎ <span>+91 63925 72657</span></p>
-        <p>✉ <span>contact@navikx.com</span></p>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="footer-box">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="seller.html">About Us</a>
-        <a href="catalog.html">Shop</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <!-- Customer Care -->
-      <div class="footer-box">
-        <h4>Customer Care</h4>
-        <a href="#">My Account</a>
-        <a href="#">Track Order</a>
-        <a href="#">Wishlist</a>
-        <a href="#">Returns &amp; Refunds</a>
-      </div>
-
-      <!-- Information -->
-      <div class="footer-box">
-        <h4>Information</h4>
-        <a href="#">Shipping Policy</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Refund Policy</a>
-      </div>
-
-      <!-- Payments -->
-      <div class="footer-box payment-box">
-        <h4>We Accept</h4>
-        <div class="payments">
-          <span>VISA</span>
-          <span>MC</span>
-          <span>RuPay</span>
-          <span>UPI</span>
+        <a href="index.html" class="footer-brand text-decoration-none">
+          <i class="fa-solid fa-spa"></i>
+          <span>SIVA &amp; HERB OILS</span>
+        </a>
+        <p>Crafted with traditional patience and botanical purity to bring authentic wellness into your everyday rituals.</p>
+        <div class="footer-contact-info">
+          <p><i class="fa-solid fa-phone"></i> +91 63925 72657</p>
+          <p><i class="fa-solid fa-envelope"></i> care@sivaherboils.com</p>
+          <p><i class="fa-solid fa-location-dot"></i> Traditional Herb Gardens, Tamil Nadu, India</p>
         </div>
       </div>
 
+      <div class="footer-box">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="seller.html">About Our Process</a>
+        <a href="catalog.html">Shop Catalog</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Customer Care</h4>
+        <a href="cart.html">View Shopping Bag</a>
+        <a href="productcheckout.html">Checkout</a>
+        <a href="catalog.html">Wishlist</a>
+        <a href="contact.html">Order Inquiries</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Purity Standards</h4>
+        <div class="trust-badge mb-2"><i class="fa-solid fa-circle-check"></i> 100% Wood-Pressed Extraction</div>
+        <div class="trust-badge mb-2"><i class="fa-solid fa-circle-check"></i> Zero Synthetic Preservatives</div>
+        <div class="trust-badge mb-2"><i class="fa-solid fa-circle-check"></i> Small-Batch Maturation</div>
+        <div class="trust-badge"><i class="fa-solid fa-circle-check"></i> Cruelty-Free &amp; Ethical</div>
+      </div>
+
+      <div class="footer-box payment-box">
+        <h4>Accepted Payments</h4>
+        <div class="payments">
+          <span>UPI</span>
+          <span>VISA</span>
+          <span>Mastercard</span>
+          <span>RuPay</span>
+          <span>COD</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Copyright -->
     <div class="copyright">
-      © 2026 SIVA &amp; HERB OILS. All rights reserved.
+      © 2026 SIVA &amp; HERB OILS. All rights reserved. Handcrafted botanical wellness.
     </div>
   </footer>
 
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core Script -->
   <script src="script.js"></script>
 </body>
-
 </html>

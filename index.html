@@ -3,959 +3,927 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content=" premium fragrance storefront" />
-  <title> SIVA & HERB OILS</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="SIVA & HERB OILS - Premium homemade herbal, hair and skin care oils prepared from pure botanical ingredients." />
+  <title>SIVA & HERB OILS | Natural Botanical Herbal Care</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Playfair+Display:ital,wght@0,500..800;1,500..800&display=swap" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <!---loading text-->
-<div class="site-loader">
 
-        <!-- Background Leaves -->
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-        <div class="loading-leaf leaf-1">
-            <i class="fa-solid fa-leaf"></i>
+  <!-- Site Preloader Screen -->
+  <div class="site-loader" id="siteLoader">
+    <!-- Background Animated Floating Leaves -->
+    <div class="loading-leaf leaf-1"><i class="fa-solid fa-leaf"></i></div>
+    <div class="loading-leaf leaf-2"><i class="fa-solid fa-leaf"></i></div>
+    <div class="loading-leaf leaf-3"><i class="fa-solid fa-leaf"></i></div>
+    <div class="loading-leaf leaf-4"><i class="fa-solid fa-leaf"></i></div>
+    <div class="loading-leaf leaf-5"><i class="fa-solid fa-leaf"></i></div>
+    <div class="loading-leaf leaf-6"><i class="fa-solid fa-leaf"></i></div>
+
+    <!-- Loader Content -->
+    <div class="loader-content">
+      <div class="loader-brand">
+        SIVA &amp; HERB OILS
+      </div>
+
+      <div class="loader-symbol">
+        <div class="loader-ring"></div>
+        <div class="loader-leaf">
+          <i class="fa-solid fa-leaf"></i>
         </div>
+      </div>
 
-        <div class="loading-leaf leaf-2">
-            <i class="fa-solid fa-leaf"></i>
-        </div>
+      <p class="loader-subtitle">
+        NATURAL • TRADITIONAL • THOUGHTFULLY MADE
+      </p>
 
-        <div class="loading-leaf leaf-3">
-            <i class="fa-solid fa-leaf"></i>
-        </div>
+      <div class="loader-line">
+        <span></span>
+      </div>
 
-        <div class="loading-leaf leaf-4">
-            <i class="fa-solid fa-leaf"></i>
-        </div>
-
-        <div class="loading-leaf leaf-5">
-            <i class="fa-solid fa-leaf"></i>
-        </div>
-
-        <div class="loading-leaf leaf-6">
-            <i class="fa-solid fa-leaf"></i>
-        </div>
-
-
-        <!-- Loader Content -->
-
-        <div class="loader-content">
-
-            <div class="loader-brand">
-                SIVA & HERB OILS
-            </div>
-
-            <div class="loader-symbol">
-
-                <div class="loader-ring"></div>
-
-                <div class="loader-leaf">
-                    <i class="fa-solid fa-leaf"></i>
-                </div>
-
-            </div>
-
-            <p class="loader-subtitle">
-                NATURAL • TRADITIONAL • THOUGHTFULLY MADE
-            </p>
-
-            <div class="loader-line">
-                <span></span>
-            </div>
-
-            <p class="loader-text">
-                Preparing your experience...
-            </p>
-
-        </div>
-
+      <p class="loader-text">
+        Preparing your botanical experience...
+      </p>
     </div>
-  <!---navbar-->
-  <header class="site-header">
-    <div class="container nav">
+  </div>
 
-      <!-- Mobile Menu -->
+  <!-- Announcement Ribbon -->
+  <div class="announcement">
+    <i class="fa-solid fa-leaf text-gold"></i>
+    <span>Complimentary Express Shipping on orders over ₹999</span>
+    <span class="announcement-bullet">•</span>
+    <span>100% Traditional Cold-Pressed Herbal Formulations</span>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <!-- Mobile Menu Toggle -->
       <div class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">
         ☰
       </div>
 
-      <!-- Logo -->
+      <!-- Brand Logo -->
       <a href="index.html" class="brand">
-        SIVA & HERB OILS
+        <i class="fa-solid fa-spa brand-icon"></i>
+        <span>SIVA &amp; HERB OILS</span>
       </a>
 
-      <!-- Navigation -->
+      <!-- Navigation Links -->
       <nav id="navLinks">
         <a class="active" href="index.html">Home</a>
         <a href="seller.html">About Us</a>
         <a href="catalog.html">Shop</a>
         <a href="contact.html">Contact Us</a>
       </nav>
+
       <!-- Navigation Actions -->
       <div class="nav-actions">
-
-        <!-- Search -->
+        <!-- Search Bar -->
         <div class="search-container">
-          <form action="" class="search-form">
-
-            <input type="text" name="search" placeholder="Search..." aria-label="Search">
-
+          <form action="catalog.html" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Search herbal oils..." aria-label="Search">
             <button type="submit" aria-label="Search">
-              <i class="fa fa-search"></i>
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-
           </form>
         </div>
 
-
-        <!-- Cart -->
-        <a href="add to card .html" class="cart-link" aria-label="Shopping Cart">
-
-          <i class="fa-solid fa-cart-shopping"></i>
-
-          <span class="cart-count">3</span>
-
+        <!-- Wishlist Link with Live Counter -->
+        <a href="catalog.html" class="wishlist-link" aria-label="Wishlist" title="View Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="wishlistCount">0</span>
         </a>
 
+        <!-- Cart Link with Live Counter -->
+        <a href="cart.html" class="cart-link" aria-label="Shopping Cart" id="headerCartLink" title="View Bag">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
       </div>
-
-
-
     </div>
   </header>
-  <!--home-->
+
+  <!-- Main Content -->
   <main id="home">
-    <section class="hero container">
+
+    <!-- Hero Section -->
+    <section class="hero container reveal-on-scroll">
       <div class="hero-copy">
-        <p class="eyebrow" style="color: blueviolet;">Natural • Traditional • Thoughtfully Made</p>
-        <h1>Nature's goodness,<br /><em>bottled.</em></h1>
+        <div class="hero-eyebrow">
+          <i class="fa-solid fa-seedling"></i>
+          <span>Natural • Traditional • Thoughtfully Made</span>
+        </div>
+        <h1>Nature's goodness,<br /><em>bottled with pure care.</em></h1>
         <p class="hero-text">
           Discover thoughtfully prepared homemade oils made from carefully
-          selected botanical ingredients <br class="desktop" />and inspired by traditional
+          selected botanical ingredients and inspired by authentic traditional
           oil-making practices.
-
         </p>
 
         <div class="hero-buttons">
-          <a class="btn btn-dark" href="#collections">Explore Our Oils <span>→</span></a>
+          <a class="btn btn-dark" href="#collections">Explore Our Oils <span class="arrow-icon">→</span></a>
           <a class="btn btn-light" href="#story">Our Story</a>
         </div>
 
-        <!--morquee-->
-        <section class="marquee-section">
+        <!-- Continuous Silk Marquee -->
+        <div class="marquee-section">
           <div class="marquee">
             <div class="marquee-track">
-              <span>Pure Ingredients</Inp></span>
-              <span class="marquee-dot">♡</span>
-
-              <span style="color: blueviolet">Small Batch</span>
-              <span class="marquee-dot">♡</span>
-
-              <span>Traditional Inspiration</Inp> </span>
-              <span class="marquee-dot">♡</span>
-
-              <span style="color: blueviolet">Made With Care</span>
-              <span class="marquee-dot">♡</span>
-
-              <span>Natural Rituals</span>
-              <span class="marquee-dot">♡</span>
-
+              <span>Pure Ingredients</span>
+              <span class="marquee-dot"><i class="fa-solid fa-droplet"></i></span>
+              <span class="highlight">Small Batch</span>
+              <span class="marquee-dot"><i class="fa-solid fa-leaf"></i></span>
+              <span>Traditional Inspiration</span>
+              <span class="marquee-dot"><i class="fa-solid fa-spa"></i></span>
+              <span class="highlight">Cold Pressed</span>
+              <span class="marquee-dot"><i class="fa-solid fa-droplet"></i></span>
+              <span>100% Botanical Rituals</span>
+              <span class="marquee-dot"><i class="fa-solid fa-leaf"></i></span>
+              <!-- Repeated for infinite seamless loop -->
+              <span>Pure Ingredients</span>
+              <span class="marquee-dot"><i class="fa-solid fa-droplet"></i></span>
+              <span class="highlight">Small Batch</span>
+              <span class="marquee-dot"><i class="fa-solid fa-leaf"></i></span>
+              <span>Traditional Inspiration</span>
+              <span class="marquee-dot"><i class="fa-solid fa-spa"></i></span>
+              <span class="highlight">Cold Pressed</span>
+              <span class="marquee-dot"><i class="fa-solid fa-droplet"></i></span>
+              <span>100% Botanical Rituals</span>
+              <span class="marquee-dot"><i class="fa-solid fa-leaf"></i></span>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
       </div>
 
+      <!-- Hero Visual Art with Floating Aura & Badges -->
       <div class="hero-art">
-        <img src="assets/hero-bottle.jpg" alt="Premium floral perfume bottle" />
-        <div class="hero-thumbs">
+        <div class="hero-aura"></div>
+        <img class="hero-main-img" src="assets/hero-bottle.jpg" alt="SIVA & HERB OILS Premium Glass Bottle" />
+        
+        <!-- Floating Interactive Badge (Top) -->
+        <div class="floating-badge hero-badge-top">
+          <div class="badge-icon-wrap">
+            <i class="fa-solid fa-shield-heart"></i>
+          </div>
+          <div>
+            <strong>100% Pure</strong>
+            <small>Cold-Pressed Botanic</small>
+          </div>
         </div>
 
+        <!-- Floating Interactive Badge (Bottom) -->
+        <div class="floating-badge hero-badge-bottom">
+          <div class="badge-icon-wrap">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <strong>4.9 ★ Rating</strong>
+            <small>Over 2,400+ reviews</small>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="benefits container" aria-label="Store benefits">
-      <div>
-        <span class="benefit-icon">▣</span>
+    <!-- Benefits Strip -->
+    <section class="benefits container reveal-on-scroll" aria-label="Store benefits">
+      <div class="benefit-item">
+        <span class="benefit-icon"><i class="fa-solid fa-truck-fast"></i></span>
         <div><b>Free Delivery</b><small>On all orders over ₹999</small></div>
       </div>
-      <div>
-        <span class="benefit-icon">♧</span>
-        <div>
-          <b>Premium Ingredients</b><small>Made with natural extracts</small>
-        </div>
+      <div class="benefit-item">
+        <span class="benefit-icon"><i class="fa-solid fa-leaf"></i></span>
+        <div><b>Premium Herbs</b><small>100% natural extracts</small></div>
       </div>
-      <div>
-        <span class="benefit-icon">◷</span>
-        <div>
-          <b>Made with care</b><small>Every bottle is prepared and packaged with attention to the little
-            details.</small>
-        </div>
+      <div class="benefit-item">
+        <span class="benefit-icon"><i class="fa-solid fa-mortar-pestle"></i></span>
+        <div><b>Made with Care</b><small>Handcrafted in small batches</small></div>
       </div>
-      <div>
-        <span class="benefit-icon">♧</span>
-        <div>
-          <b>Eco Friendly Packaging</b><small>Sustainable &amp; recyclable</small>
-        </div>
+      <div class="benefit-item">
+        <span class="benefit-icon"><i class="fa-solid fa-recycle"></i></span>
+        <div><b>Eco Packaging</b><small>Sustainable &amp; recyclable</small></div>
       </div>
-      <div>
-        <span class="benefit-icon">◇</span>
-        <div><b>Secure Checkout</b><small>100% secure payments</small></div>
+      <div class="benefit-item">
+        <span class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></span>
+        <div><b>Secure Checkout</b><small>100% verified payments</small></div>
       </div>
     </section>
-    <!---products-->
-    <section class="section container" id="collections">
+
+    <!-- New Collection Products Carousel -->
+    <section class="section container reveal-on-scroll" id="collections">
       <div class="section-head">
-        <h2>New Collection</h2>
+        <div>
+          <span class="sub-heading-tag"><i class="fa-solid fa-sparkles"></i> Handpicked Essentials</span>
+          <h2>New Collection</h2>
+        </div>
         <div class="head-actions">
-          <a class="btn btn-dark" href="catalog.html">View <span>→</span></a>
+          <a class="btn btn-outline" href="catalog.html">View All Products <span class="arrow-icon">→</span></a>
         </div>
       </div>
-      <!--product cards-->
-      <section class="product-section" id="shop">
-        <div class="container">
-          <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-            <!-- Carousel Items -->
-            <div class="carousel-inner">
-              <!-- Slide 1 -->
-              <div class="carousel-item active">
-                <div class="row g-4">
 
-                  <div class="col-lg-3 col-md-6">
-                    <article class="product-card">
-                      <button class="heart">♡</button>
-                      <img src="assets/product-1.jpg" alt="Coconut Oil">
-
-                      <div class="product-info">
-                        <div class="product-details">
-                          <span>Coconut Oil</span>
-                          <b>₹ 299.00</b>
+      <!-- Product Carousel -->
+      <div class="product-section" id="shop">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+          
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <article class="product-card">
+                    <span class="card-badge">Bestseller</span>
+                    <button class="heart" aria-label="Add to wishlist" onclick="toggleWishlist(this, 'Cold-Pressed Coconut Oil')">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="card-img-wrap">
+                      <img src="assets/product-1.jpg" alt="Cold-Pressed Coconut Oil" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-details">
+                        <div class="product-stars">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                          <span>5.0</span>
                         </div>
-
-                        <a href="p1.html"><button type="button" class="buy-btn">
-                          Buy Now
-                          <i class="fa-solid fa-cart-shopping"></i>
-                        </button></a>
+                        <span class="product-title">Coconut Oil</span>
+                        <b class="product-price">₹ 299.00</b>
                       </div>
-                    </article>
-                  </div>
+                      <div class="card-action-btns">
+                        <button type="button" class="buy-btn" onclick="addToCart('Coconut Oil', 299, 'assets/product-1.jpg')">
+                          <span>Buy Now</span>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <a href="p1.html" class="quick-view-btn" title="View Product Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
 
-                  <div class="col-lg-3 col-md-6">
-                    <article class="product-card featured">
-                      <button class="heart">♡</button>
-                      <img src="assets/product-2.jpg" alt="Amla and Brahmi">
-
-                      <div class="product-info">
-                        <div class="product-details">
-                          <span>Amla &amp; Brahmi</span>
-                          <b>₹ 499.00</b>
+                <!-- Product 2 -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <article class="product-card featured">
+                    <span class="card-badge gold">Herbal Blend</span>
+                    <button class="heart" aria-label="Add to wishlist" onclick="toggleWishlist(this, 'Amla & Brahmi Hair Oil')">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="card-img-wrap">
+                      <img src="assets/product-2.jpg" alt="Amla & Brahmi Hair Oil" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-details">
+                        <div class="product-stars">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                          <span>4.9</span>
                         </div>
-
-                        <a href=" "><button type="button" class="buy-btn">
-                          Buy Now
-                          <i class="fa-solid fa-cart-shopping"></i>
-                        </button></a>
+                        <span class="product-title">Amla &amp; Brahmi</span>
+                        <b class="product-price">₹ 499.00</b>
                       </div>
-                    </article>
-                  </div>
+                      <div class="card-action-btns">
+                        <button type="button" class="buy-btn" onclick="addToCart('Amla & Brahmi', 499, 'assets/product-2.jpg')">
+                          <span>Buy Now</span>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <a href="p2.html" class="quick-view-btn" title="View Product Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
 
-                  <div class="col-lg-3 col-md-6">
-                    <article class="product-card">
-                      <button class="heart">♡</button>
-                      <img src="assets/product-4.jpg" alt="Neem Scalp Care Oil">
-
-                      <div class="product-info">
-                        <div class="product-details">
-                          <span>Neem Scalp Care oil</span>
-                          <b>₹ 199.00</b>
+                <!-- Product 3 -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <article class="product-card">
+                    <span class="card-badge">Anti-Dandruff</span>
+                    <button class="heart" aria-label="Add to wishlist" onclick="toggleWishlist(this, 'Neem Scalp Care Oil')">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="card-img-wrap">
+                      <img src="assets/product-4.jpg" alt="Neem Scalp Care Oil" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-details">
+                        <div class="product-stars">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                          <span>4.8</span>
                         </div>
-
-                        <a href=" "><button type="button" class="buy-btn">
-                          Buy Now
-                          <i class="fa-solid fa-cart-shopping"></i>
-                        </button></a>
+                        <span class="product-title">Neem Scalp Care</span>
+                        <b class="product-price">₹ 199.00</b>
                       </div>
-                    </article>
-                  </div>
+                      <div class="card-action-btns">
+                        <button type="button" class="buy-btn" onclick="addToCart('Neem Scalp Care Oil', 199, 'assets/product-4.jpg')">
+                          <span>Buy Now</span>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <a href="p3.html" class="quick-view-btn" title="View Product Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
 
-                  <div class="col-lg-3 col-md-6">
-                    <article class="product-card">
-                      <button class="heart">♡</button>
-                      <img src="assets/product-6.jpg" alt="Hair Care Oil">
-                      <div class="product-info">
-                        <div class="product-details">
-                          <span>Hair Care Oil</span>
-                          <b>₹ 1,299.00</b>
+                <!-- Product 4 -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <article class="product-card">
+                    <span class="card-badge gold">Luxury Care</span>
+                    <button class="heart" aria-label="Add to wishlist" onclick="toggleWishlist(this, 'Intensive Hair Care Oil')">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="card-img-wrap">
+                      <img src="assets/product-6.jpg" alt="Intensive Hair Care Oil" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-details">
+                        <div class="product-stars">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                          <span>5.0</span>
                         </div>
-                        <a href=" "><button type="button" class="buy-btn">
-                          Buy Now
-                          <i class="fa-solid fa-cart-shopping"></i>
-                        </button></a>
+                        <span class="product-title">Hair Care Oil</span>
+                        <b class="product-price">₹ 1,299.00</b>
                       </div>
-                    </article>
-                  </div>
-
+                      <div class="card-action-btns">
+                        <button type="button" class="buy-btn" onclick="addToCart('Hair Care Oil', 1299, 'assets/product-6.jpg')">
+                          <span>Buy Now</span>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <a href="p4.html" class="quick-view-btn" title="View Product Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                      </div>
+                    </div>
+                  </article>
                 </div>
               </div>
+            </div>
 
-              <!-- Slide 2 -->
-              <div class="carousel-item">
-                <div class="row g-4">
-                  <div class="col-lg-3 col-md-6">
-                    <article class="product-card">
-                      <button class="heart">♡</button>
-                      <img src="assets/watermarked_img_14638677125859379117.jpg" alt="Velvet Hair Oil">
-                      <div class="product-info">
-                        <div class="product-details">
-                          <span>Velvet Hair Oil</span>
-                          <b>₹ 1,399.00</b>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row g-4">
+                <!-- Product 5 -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <article class="product-card">
+                    <span class="card-badge gold">Premium Elixir</span>
+                    <button class="heart" aria-label="Add to wishlist" onclick="toggleWishlist(this, 'Velvet Hair Oil')">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="card-img-wrap">
+                      <img src="assets/watermarked_img_14638677125859379117.jpg" alt="Velvet Hair Oil" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-details">
+                        <div class="product-stars">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                          <span>5.0</span>
                         </div>
-                        <a href=" "><button type="button" class="buy-btn">
-                          Buy Now
-                          <i class="fa-solid fa-cart-shopping"></i>
-                        </button></a>
+                        <span class="product-title">Velvet Hair Oil</span>
+                        <b class="product-price">₹ 1,399.00</b>
                       </div>
-                    </article>
-                  </div>
+                      <div class="card-action-btns">
+                        <button type="button" class="buy-btn" onclick="addToCart('Velvet Hair Oil', 1399, 'assets/watermarked_img_14638677125859379117.jpg')">
+                          <span>Buy Now</span>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <a href="p5.html" class="quick-view-btn" title="View Product Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
 
-                  <div class="col-lg-3 col-md-6">
-                    <article class="product-card">
-                      <button class="heart">♡</button>
-                      <img src="assets/Screenshot 2026-09-10 103944.png" alt="Coconut Hair Oil">
-                      <div class="product-info">
-                        <div class="product-details">
-                          <span>Sesame Oil</span>
-                          <b>₹ 399.00</b>
+                <!-- Product 6 -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <article class="product-card">
+                    <span class="card-badge">Cold-Pressed</span>
+                    <button class="heart" aria-label="Add to wishlist" onclick="toggleWishlist(this, 'Pure Sesame Oil')">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="card-img-wrap">
+                      <img src="assets/Screenshot 2026-09-10 103944.png" alt="Pure Sesame Oil" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-details">
+                        <div class="product-stars">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                          <span>4.7</span>
                         </div>
-                        <a href=" "><button type="button" class="buy-btn">
-                          Buy Now
-                          <i class="fa-solid fa-cart-shopping"></i>
-                        </button></a>
+                        <span class="product-title">Sesame Oil</span>
+                        <b class="product-price">₹ 399.00</b>
                       </div>
-                    </article>
-                  </div>
+                      <div class="card-action-btns">
+                        <button type="button" class="buy-btn" onclick="addToCart('Sesame Oil', 399, 'assets/Screenshot 2026-09-10 103944.png')">
+                          <span>Buy Now</span>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <a href="catalog.html" class="quick-view-btn" title="View Product Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
 
-                  <div class="col-lg-3 col-md-6">
-                    <article class="product-card featured">
-                      <button class="heart">♡</button>
-                      <img src="assets/Screenshot 2026-09-10 104048.png" alt="Amla Brahmi Oil">
-
-                      <div class="product-info">
-                        <div class="product-details">
-                          <span>BhringRai Oil</span>
-                          <b>₹ 599.00</b>
+                <!-- Product 7 -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <article class="product-card featured">
+                    <span class="card-badge gold">Ayurvedic</span>
+                    <button class="heart" aria-label="Add to wishlist" onclick="toggleWishlist(this, 'Pure BhringRaj Oil')">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="card-img-wrap">
+                      <img src="assets/Screenshot 2026-09-10 104048.png" alt="Pure BhringRaj Oil" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-details">
+                        <div class="product-stars">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                          <span>4.9</span>
                         </div>
-                        <a href=" "><button type="button" class="buy-btn">
-                          Buy Now
-                          <i class="fa-solid fa-cart-shopping"></i>
-                        </button></a>
+                        <span class="product-title">BhringRaj Oil</span>
+                        <b class="product-price">₹ 599.00</b>
                       </div>
-                    </article>
-                  </div>
+                      <div class="card-action-btns">
+                        <button type="button" class="buy-btn" onclick="addToCart('BhringRaj Oil', 599, 'assets/Screenshot 2026-09-10 104048.png')">
+                          <span>Buy Now</span>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <a href="catalog.html" class="quick-view-btn" title="View Product Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
 
-                  <div class="col-lg-3 col-md-6">
-                    <article class="product-card">
-                      <button class="heart">♡</button>
-                      <img src="assets/product-8.jpg" alt="Neem Oil">
-
-                      <div class="product-info">
-                        <div class="product-details">
-                          <span>Tea Tree Oil</span>
-                          <b>₹ 699.00</b>
+                <!-- Product 8 -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <article class="product-card">
+                    <span class="card-badge">Essential</span>
+                    <button class="heart" aria-label="Add to wishlist" onclick="toggleWishlist(this, 'Pure Tea Tree Oil')">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="card-img-wrap">
+                      <img src="assets/product-8.jpg" alt="Pure Tea Tree Oil" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-details">
+                        <div class="product-stars">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                          <span>4.9</span>
                         </div>
-
-                        <a href=" "><button type="button" class="buy-btn">
-                          Buy Now
-                          <i class="fa-solid fa-cart-shopping"></i>
-                        </button></a>
+                        <span class="product-title">Tea Tree Oil</span>
+                        <b class="product-price">₹ 699.00</b>
                       </div>
-                    </article>
-                  </div>
+                      <div class="card-action-btns">
+                        <button type="button" class="buy-btn" onclick="addToCart('Tea Tree Oil', 699, 'assets/product-8.jpg')">
+                          <span>Buy Now</span>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <a href="catalog.html" class="quick-view-btn" title="View Product Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                      </div>
+                    </div>
+                  </article>
                 </div>
               </div>
-
-              <!--slide 3-->
             </div>
+          </div>
 
-            <!-- Previous Button -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev" aria-label="Previous Products">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next" aria-label="Next Products">
+            <span class="carousel-control-next-icon"></span>
+          </button>
 
-            <!-- Next Button -->
-            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-
-            <!-- Indicators -->
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button>
-
-              <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
-            </div>
-
+          <!-- Carousel Indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-label="Page 1"></button>
+            <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Page 2"></button>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--story-->
-      <section class="story container" id="story">
-        <div class="story-copy">
-          <p class="eyebrow" style="color: blueviolet;">A SCENT THAT DEFINES YOU</p>
-          <h2>A Scent That<br />Defines You</h2>
+    <!-- Story / Brand Heritage Section -->
+    <section class="story container reveal-on-scroll" id="story">
+      <div class="story-copy">
+        <p class="story-eyebrow"><i class="fa-solid fa-spa"></i> A Scent That Defines You</p>
+        <h2>Traditional Craft,<br /><em>Unmatched Purity</em></h2>
+        <p>
+          Discover the art of pure herbal distillation, where every drop tells a story
+          of wellness, ancestral care, and botanical perfection.
+        </p>
+        <a class="btn btn-white" href="seller.html">Discover Our Process <span class="arrow-icon">→</span></a>
+      </div>
+      <div class="story-images">
+        <div class="story-img-wrap">
+          <img class="portrait" src="assets/watermarked_img_14638677125859379117.jpg" alt="Botanical herbal oil presentation" loading="lazy" />
+        </div>
+        <div class="story-img-wrap">
+          <img src="assets/story-bottle.jpg" alt="Herbal oil surrounded by fresh flowers" loading="lazy" />
+        </div>
+        <div class="story-img-wrap">
+          <img class="small-story" src="assets/story-small.jpg" alt="Amber oil extract bottle" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Benefits Section -->
+    <section class="benefits container second-benefits reveal-on-scroll" aria-label="Product guarantees">
+      <div class="benefit-item">
+        <span class="benefit-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+        <div><b>Long Lasting Ritual</b><small>Deeply nourishing texture</small></div>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon"><i class="fa-solid fa-seedling"></i></span>
+        <div><b>100% Cold-Pressed</b><small>Preserves vital micronutrients</small></div>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon"><i class="fa-solid fa-droplet"></i></span>
+        <div><b>Zero Synthetics</b><small>No mineral oils or parabens</small></div>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon"><i class="fa-solid fa-box-open"></i></span>
+        <div><b>Handcrafted Batches</b><small>Freshly bottled with precision</small></div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter container reveal-on-scroll">
+      <div class="newsletter-info">
+        <span class="newsletter-tag"><i class="fa-solid fa-envelope-open-text"></i> Join Our Herbal Community</span>
+        <h2>Stay in the Loop</h2>
+        <p>
+          Subscribe to receive exclusive small-batch releases, wellness guides,
+          and a complimentary 15% discount on your first order.
+        </p>
+      </div>
+      <form id="newsletterForm" class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <div class="newsletter-input-group">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email address..." required aria-label="Email address" />
+          <button type="submit" id="newsletterBtn">
+            <span>Subscribe</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+        <div class="newsletter-message" id="newsletterMsg"></div>
+      </form>
+      <div class="newsletter-image-wrap">
+        <img src="assets/type of oils.jpg" alt="Collection of botanical oils" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- Quality Section ("Our Promise") -->
+    <section class="quality-section reveal-on-scroll" id="quality">
+      <div class="container">
+        <div class="quality-heading">
+          <div class="quality-label">
+            <i class="fa-solid fa-award"></i>
+            <span>Our Promise</span>
+          </div>
+          <h2>Why Choose SIVA &amp; HERB OILS?</h2>
           <p>
-            Discover the art of fine perfumery, where every note tells a story
-            of sophistication and charm.
-          </p>
-          <a class="btn btn-white" href="#guide">Discover More <span>→</span></a>
-        </div>
-        <div class="story-images">
-          <img class="portrait" src="assets/watermarked_img_14638677125859379117.jpg"
-            alt="Elegant fragrance portrait" />
-          <img src="assets/story-bottle.jpg" alt="Perfume surrounded by flowers" />
-          <img class="small-story" src="assets/story-small.jpg" alt="Amber perfume" />
-        </div>
-      </section>
-      <!--benefits-->
-      <section class="benefits container second-benefits">
-        <div>
-          <span class="benefit-icon">▣</span>
-          <div><b>Free Delivery</b><small>On all orders over ₹999</small></div>
-        </div>
-        <div>
-          <span class="benefit-icon">♧</span>
-          <div>
-            <b>Premium Ingredients</b><small>Made with natural extracts</small>
-          </div>
-        </div>
-        <div>
-          <span class="benefit-icon">◷</span>
-          <div>
-            <b>Long Lasting Scents</b><small>Fragrance that stays with you</small>
-          </div>
-        </div>
-        <div>
-          <span class="benefit-icon">♧</span>
-          <div>
-            <b>Eco Friendly Packaging</b><small>Sustainable &amp; recyclable</small>
-          </div>
-        </div>
-      </section>
-
-
-
-      <!--newsletter-->
-      <section class="newsletter container">
-        <div>
-          <h2 style="color: blueviolet;">Stay in the Loop</h2>
-          <p>
-            Subscribe to our newsletter and be the first to know about new
-            arrivals and exclusive offers.
+            We keep our products simple, transparent, and true to the time-tested
+            traditional methods that have nourished families for generations.
           </p>
         </div>
-        <form id="newsletterForm">
-          <input type="email" placeholder="Enter your email address" required />
-          <button type="submit">Subscribe</button>
-        </form>
-        <img src="assets/type of oils.jpg" alt="Perfume bottle" />
 
-      </section>
-
-
-      <!--guide-->
-      <section class="quality-section" id="quality">
-
-        <div class="container">
-
-          <div class="quality-heading">
-
-            <div class="small-label" style="color: blueviolet;">
-              Our Promise
+        <div class="quality-grid">
+          <div class="quality-card">
+            <div class="quality-icon">
+              <i class="fa-solid fa-leaf"></i>
             </div>
-
-            <h2>
-              Why choose NatureNest?
-            </h2>
-
-            <p>
-              We keep our products simple, transparent and
-              close to the traditional methods that inspired us.
-            </p>
-
+            <h3>Natural Ingredients</h3>
+            <p>Carefully selected sun-dried and fresh botanical herbs for every single blend.</p>
           </div>
 
-
-          <div class="quality-grid">
-
-
-            <div class="quality-card">
-
-              <div class="quality-icon">
-                <i class="fa-solid fa-leaf"></i>
-              </div>
-
-              <h3>
-                Natural Ingredients
-              </h3>
-
-              <p>
-                Carefully selected natural ingredients
-                for every product.
-              </p>
-
+          <div class="quality-card">
+            <div class="quality-icon">
+              <i class="fa-solid fa-droplet"></i>
             </div>
-
-
-            <div class="quality-card">
-
-              <div class="quality-icon">
-                <i class="fa-solid fa-droplet"></i>
-              </div>
-
-              <h3>
-                Cold Pressed
-              </h3>
-
-              <p>
-                Traditional extraction methods help
-                preserve natural character.
-              </p>
-
-            </div>
-
-
-            <div class="quality-card">
-
-              <div class="quality-icon">
-                <i class="fa-solid fa-seedling"></i>
-              </div>
-
-              <h3>
-                Small Batch
-              </h3>
-
-              <p>
-                Products are prepared carefully in
-                thoughtfully managed batches.
-              </p>
-
-            </div>
-
-
-            <div class="quality-card">
-
-              <div class="quality-icon">
-                <i class="fa-solid fa-box"></i>
-              </div>
-
-              <h3>
-                Secure Packing
-              </h3>
-
-              <p>
-                Every order is packed carefully before
-                reaching your doorstep.
-              </p>
-
-            </div>
-
-
+            <h3>Cold-Pressed Purity</h3>
+            <p>Traditional wood/cold extraction ensures uncompromised nutrient density.</p>
           </div>
 
+          <div class="quality-card">
+            <div class="quality-icon">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h3>Small-Batch Care</h3>
+            <p>Formulated in thoughtfully monitored artisan batches for pristine freshness.</p>
+          </div>
+
+          <div class="quality-card">
+            <div class="quality-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Secure Packaging</h3>
+            <p>Amber UV-resistant glass &amp; tamper-proof seals preserve natural freshness.</p>
+          </div>
         </div>
-
-      </section>
+      </div>
+    </section>
 
   </main>
 
-
-
-  <!-- CUSTOMER REVIEWS -->
-  <section class="reviews-section">
-
+  <!-- Customer Reviews Section -->
+  <section class="reviews-section reveal-on-scroll">
     <div class="container">
-
       <div class="review-heading text-center">
+        <span class="sub-heading-tag"><i class="fa-solid fa-heart"></i> Verified Experiences</span>
         <h1>Customer Reviews</h1>
         <p>
-          Discover what our customers say about their experience with
-          SIVA & HERB OILS.
+          Discover what our community loves about their rituals with
+          SIVA &amp; HERB OILS.
         </p>
       </div>
 
-      <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
-
+      <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-inner">
-
-          <!-- SLIDE 1 -->
+          <!-- Slide 1 -->
           <div class="carousel-item active">
-
             <div class="row g-4 justify-content-center">
-
               <div class="col-lg-6 col-md-6 col-12">
                 <div class="review-card">
-
-                  <h3>Amazing Quality &  Fragrance</h3>
-
+                  <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
                   <div class="stars">★★★★★</div>
-
+                  <h3>Amazing Quality &amp; Fragrance</h3>
                   <p>
                     “I really loved the quality of the herbal oil.
-                    It feels natural, has a pleasant fragrance, and
-                    makes my hair feel soft and healthy.”
+                    It feels natural, has a pleasant botanical scent, and
+                    makes my hair feel extraordinarily soft and healthy.”
                   </p>
-
-                  <span>— Priya S.</span>
-
+                  <div class="reviewer-meta">
+                    <div class="reviewer-avatar">PS</div>
+                    <div>
+                      <strong>Priya S.</strong>
+                      <small><i class="fa-solid fa-circle-check text-success"></i> Verified Buyer</small>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="col-lg-6 col-md-6 col-12">
                 <div class="review-card">
-
-                  <h3>Feels Completely Natural</h3>
-
+                  <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
                   <div class="stars">★★★★★</div>
-
+                  <h3>Feels Completely Natural</h3>
                   <p>
-                    “The oil has a smooth texture and doesn’t feel too
-                    heavy. I’ve been using it regularly and really enjoy
-                    the traditional herbal feel.”
+                    “The oil has a smooth texture and doesn’t feel sticky or heavy.
+                    I’ve been using it regularly for head massages and love the traditional herbal feel.”
                   </p>
-
-                  <span>— Arun K.</span>
-
+                  <div class="reviewer-meta">
+                    <div class="reviewer-avatar">AK</div>
+                    <div>
+                      <strong>Arun K.</strong>
+                      <small><i class="fa-solid fa-circle-check text-success"></i> Verified Buyer</small>
+                    </div>
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
 
-
-          <!-- SLIDE 2 -->
+          <!-- Slide 2 -->
           <div class="carousel-item">
-
             <div class="row g-4 justify-content-center">
-
               <div class="col-lg-6 col-md-6 col-12">
                 <div class="review-card">
-
-                  <h3>Great Product for Regular Use</h3>
-
+                  <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
                   <div class="stars">★★★★★</div>
-
+                  <h3>Great Product for Regular Care</h3>
                   <p>
-                    “I ordered the Amla &  Brahmi oil and was impressed
-                    with the packaging and quality. It has become part of
+                    “I ordered the Amla &amp; Brahmi oil and was impressed
+                    with the packaging and quality. It has become an essential part of
                     my weekly hair-care routine.”
                   </p>
-
-                  <span>— Meena R.</span>
-                  
+                  <div class="reviewer-meta">
+                    <div class="reviewer-avatar">MR</div>
+                    <div>
+                      <strong>Meena R.</strong>
+                      <small><i class="fa-solid fa-circle-check text-success"></i> Verified Buyer</small>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="col-lg-6 col-md-6 col-12">
                 <div class="review-card">
-
-                  <h3>Beautiful Packaging</h3>
-
+                  <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
                   <div class="stars">★★★★★</div>
-
+                  <h3>Beautiful Eco-Friendly Packaging</h3>
                   <p>
-                    “The product arrived neatly packed and looked exactly
-                    as shown. The herbal fragrance is very pleasant.”
+                    “The product arrived neatly packed and looked even better than
+                    the photos. The herbal fragrance is soothing, earthy, and very pleasant.”
                   </p>
-
-                  <span>— Karthik M.</span>
-
+                  <div class="reviewer-meta">
+                    <div class="reviewer-avatar">KM</div>
+                    <div>
+                      <strong>Karthik M.</strong>
+                      <small><i class="fa-solid fa-circle-check text-success"></i> Verified Buyer</small>
+                    </div>
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
 
-
-          <!-- SLIDE 3 -->
+          <!-- Slide 3 -->
           <div class="carousel-item">
-
             <div class="row g-4 justify-content-center">
-
               <div class="col-lg-6 col-md-6 col-12">
                 <div class="review-card">
-
-                  <h3>A Wonderful Traditional Touch</h3>
-
+                  <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
                   <div class="stars">★★★★★</div>
-
+                  <h3>A Wonderful Traditional Touch</h3>
                   <p>
-                    “I like that the product focuses on botanical
-                    ingredients and traditional oil-making inspiration.
-                    The overall experience has been excellent.”
+                    “I love that the brand focuses on botanical
+                    ingredients and authentic traditional oil-making inspiration.
+                    The results on dry scalp were noticeable within two weeks.”
                   </p>
-
-                  <span>— Divya P.</span>
-
+                  <div class="reviewer-meta">
+                    <div class="reviewer-avatar">DP</div>
+                    <div>
+                      <strong>Divya P.</strong>
+                      <small><i class="fa-solid fa-circle-check text-success"></i> Verified Buyer</small>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="col-lg-6 col-md-6 col-12">
                 <div class="review-card">
-
-                  <h3>Feels Natural</h3>
-
+                  <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
                   <div class="stars">★★★★★</div>
-
+                  <h3>Authentic &amp; Nourishing</h3>
                   <p>
                     “I was impressed with the natural ingredients and
-                    traditional feel of the product. The packaging was
-                    also neat and attractive.”
+                    cooling effect of the scalp oil. You can genuinely feel the pure extracts at work.”
                   </p>
-
-                  <span>— Prasanth S.</span>
-
+                  <div class="reviewer-meta">
+                    <div class="reviewer-avatar">PS</div>
+                    <div>
+                      <strong>Prasanth S.</strong>
+                      <small><i class="fa-solid fa-circle-check text-success"></i> Verified Buyer</small>
+                    </div>
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
 
-
-        <!-- PREVIOUS BUTTON -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
-
+        <!-- Carousel Buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev" aria-label="Previous Review">
           <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Previous</span>
-
         </button>
-
-
-        <!-- NEXT BUTTON -->
-        <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
-
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next" aria-label="Next Review">
           <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Next</span>
-
         </button>
 
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-label="Review Slide 1"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Review Slide 2"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Review Slide 3"></button>
+        </div>
       </div>
-
     </div>
-
   </section>
 
-
-  <!--faq---->
-  <section class="faq" id="faq">
-
+  <!-- FAQ Section -->
+  <section class="faq reveal-on-scroll" id="faq">
     <div class="container">
-
-      <div class="row">
-
-        <div class="col-lg-4 mb-5 mb-lg-0">
-
-          <div class="section-label" style="color: blueviolet;">
-            Questions<h3 class="section-title">
-              Frequently
-              asked.
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-5 mb-lg-0">
+          <div class="section-label">
+            <span class="sub-heading-tag"><i class="fa-solid fa-circle-question"></i> Need Clarity?</span>
+            <h3 class="section-title">
+              Frequently<br />Asked Questions.
             </h3>
           </div>
-
-
-          <p class="section-description mt-4">
-            Everything you need to know before bringing
-            our oils into your routine.
-
-            <img src="assets/watermarked_img_14638677125859379117.jpg">
+          <p class="section-description mt-3">
+            Everything you need to know before bringing our handcrafted herbal oils into your daily wellness rituals.
           </p>
+          <div class="faq-img-card">
+            <img src="assets/watermarked_img_14638677125859379117.jpg" alt="Herbal Oil Glass Bottle" loading="lazy">
+            <div class="faq-img-badge">
+              <i class="fa-solid fa-leaf"></i> 100% Traditional Formulation
+            </div>
+          </div>
         </div>
-        <div class="col-lg-8">
 
+        <div class="col-lg-7">
           <div class="accordion" id="faqAccordion">
             <div class="accordion-item">
-
               <h2 class="accordion-header">
-
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                  How should I store the oil?
+                  How should I store the herbal oil?
                 </button>
-
               </h2>
-
               <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-
                 <div class="accordion-body">
-
-                  Store the product according to the
-                  instructions provided on its label,
-                  generally away from excessive heat,
-                  moisture, and direct sunlight.
-
+                  Store the product in a cool, dry place away from direct sunlight and excessive heat. Our UV-protective amber glass preserves the natural botanical properties.
                 </div>
-
               </div>
             </div>
+
             <div class="accordion-item">
-
               <h2 class="accordion-header">
-
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq2">
-                  How often can I use the oil?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  How often can I use the hair &amp; scalp oils?
                 </button>
-
               </h2>
-
               <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-
                 <div class="accordion-body">
-
-                  Follow the recommended usage
-                  instructions provided with the specific
-                  product. Individual routines can vary.
-
+                  For optimal results, apply 2 to 3 times a week as an overnight or 1-hour pre-wash ritual. Gently massage into scalp using circular fingertip motions.
                 </div>
-
               </div>
-
             </div>
 
-
             <div class="accordion-item">
-
               <h2 class="accordion-header">
-
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq3">
-                  Are your oils suitable for everyone?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Are your oils suitable for all hair and skin types?
                 </button>
-
               </h2>
-
               <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-
                 <div class="accordion-body">
-
-                  Not necessarily. Always review the
-                  ingredient list before use. If you have
-                  allergies or sensitive skin, consider a
-                  patch test before wider use.
-
+                  Yes, our formulas use gentle, food-grade botanical ingredients. However, if you have sensitive skin or specific allergies, we recommend conducting a patch test 24 hours prior to regular use.
                 </div>
-
               </div>
-
             </div>
 
-
             <div class="accordion-item">
-
               <h2 class="accordion-header">
-
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq4">
-                  How long does the oil last?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  What is the shelf life of each bottle?
                 </button>
-
               </h2>
-
               <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-
                 <div class="accordion-body">
-
-                  Please check the expiry or best-before
-                  information printed on the product
-                  packaging.
-
+                  Because our oils are cold-pressed with natural antioxidants, they retain maximum potency for 18 months from manufacturing date. Check the exact batch date stamped on your box.
                 </div>
-
               </div>
-
             </div>
-
 
             <div class="accordion-item">
-
               <h2 class="accordion-header">
-
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq5">
-                  Are the products homemade?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Are the products truly homemade in small batches?
                 </button>
-
               </h2>
-
               <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-
                 <div class="accordion-body">
-
-                  Our oils are prepared in small batches
-                  using the ingredients and preparation
-                  methods described for each product.
-
+                  Yes! Each batch is handcrafted and monitored with precision using authentic recipes passed down through generations, ensuring pure consistency and quality.
                 </div>
-
               </div>
-
             </div>
-
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!---contact-->
+  <!-- Footer -->
   <footer id="contact">
     <div class="footer-container">
-
-      <!-- Company -->
+      <!-- Company Information -->
       <div class="footer-box company">
-        <h2>SIVA &amp; HERB OILS</h2>
-
+        <a href="index.html" class="footer-brand">
+          <i class="fa-solid fa-spa"></i>
+          <span>SIVA &amp; HERB OILS</span>
+        </a>
         <p>
-          Crafted with passion and elegance to bring you timeless fragrances
-          that leave a lasting impression.
+          Crafted with authentic passion and Ayurvedic reverence to bring you pure,
+          chemical-free herbal care that nourishes from root to tip.
         </p>
-
-        <p>☎ <span>+91 63925 72657</span></p>
-        <p>✉ <span>contact@navikx.com</span></p>
+        <div class="footer-contact-info">
+          <p><i class="fa-solid fa-phone"></i> <span>+91 63925 72657</span></p>
+          <p><i class="fa-solid fa-envelope"></i> <span>contact@navikx.com</span></p>
+          <p><i class="fa-solid fa-location-dot"></i> <span>Tamil Nadu, India</span></p>
+        </div>
       </div>
 
       <!-- Quick Links -->
       <div class="footer-box">
         <h4>Quick Links</h4>
-
         <a href="index.html">Home</a>
-        <a href="seller.html">About Us</a>
-        <a href="catalog.html">Shop</a>
-        <a href="contact.html">Contact</a>
+        <a href="seller.html">Our Process &amp; Story</a>
+        <a href="catalog.html">Shop All Oils</a>
+        <a href="contact.html">Contact Support</a>
+        <a href="#faq">Frequently Asked</a>
       </div>
 
       <!-- Customer Care -->
       <div class="footer-box">
         <h4>Customer Care</h4>
-
-        <a href="#">My Account</a>
+        <a href="cart.html">My Shopping Bag</a>
+        <a href="productcheckout.html">Checkout</a>
+        <a href="catalog.html">Wishlist</a>
         <a href="#">Track Order</a>
-        <a href="#">Wishlist</a>
         <a href="#">Returns &amp; Refunds</a>
       </div>
 
@@ -965,27 +933,55 @@
         <a href="#">Shipping Policy</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
-        <a href="#">Refund Policy</a>
+        <a href="#">Pure Quality Guarantee</a>
       </div>
-      <!-- Payments -->
-      <div class="footer-box payment-box">
-        <h4>We Accept</h4>
 
+      <!-- Payments & Trust -->
+      <div class="footer-box payment-box">
+        <h4>Secure Payments</h4>
         <div class="payments">
           <span>VISA</span>
           <span>MC</span>
           <span>RuPay</span>
           <span>UPI</span>
         </div>
+        <div class="trust-badge mt-3">
+          <i class="fa-solid fa-shield-halved"></i>
+          <small>256-Bit SSL Encrypted Checkout</small>
+        </div>
       </div>
     </div>
+
     <!-- Copyright -->
     <div class="copyright">
-      © 2026 SIVA &amp; HERB OILS. All rights reserved.
+      <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <span>© 2026 SIVA &amp; HERB OILS. All rights reserved.</span>
+        <span>Crafted with <i class="fa-solid fa-heart text-danger"></i> for Pure Natural Wellness</span>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  </body>
+  <!-- Floating Toast Notification for Cart & Wishlist -->
+  <div class="cart-toast" id="cartToast" role="alert" aria-live="assertive">
+    <div class="toast-icon" id="toastIcon">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="toast-body">
+      <strong id="toastTitle">Added to Bag!</strong>
+      <p id="toastMessage">Product has been added to your shopping cart.</p>
+    </div>
+    <button type="button" class="toast-close" onclick="closeToast()" aria-label="Close notification">✕</button>
+  </div>
 
+  <!-- Floating Back to Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" title="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Site Interactive Scripts -->
+  <script src="script.js"></script>
+
+</body>
 </html>

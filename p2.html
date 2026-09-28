@@ -1,428 +1,450 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amla & Brahmi Hair Oil - Authentic slow-infused botanical formula with fresh amla and organic brahmi to stimulate follicular growth." />
+  <title>Amla & Brahmi Hair Oil | SIVA & HERB OILS</title>
 
-    <title> Oil and serum</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Playfair+Display:ital,wght@0,500..800;1,500..800&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link rel="stylesheet" href="productdetail.css">
-    <link rel="stylesheet" href="style.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="bg-cream">
 
-<body>
+  <!-- Site Preloader Screen -->
+  <div class="site-loader" id="siteLoader">
+    <div class="loader-content">
+      <div class="loader-brand">SIVA &amp; HERB OILS</div>
+      <div class="loader-symbol">
+        <div class="loader-ring"></div>
+        <div class="loader-leaf"><i class="fa-solid fa-leaf"></i></div>
+      </div>
+      <p class="loader-subtitle">AMLA &amp; BRAHMI HAIR ELIXIR</p>
+      <div class="loader-line"><span></span></div>
+    </div>
+  </div>
 
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="container nav">
+  <!-- Announcement Ribbon -->
+  <div class="announcement">
+    <i class="fa-solid fa-leaf text-gold"></i>
+    <span>Complimentary Express Shipping on orders over ₹999</span>
+    <span class="announcement-bullet">•</span>
+    <span>Use Code <strong>PURE15</strong> for 15% Off Your Order</span>
+  </div>
 
-            <!-- Mobile Menu -->
-            <div class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">
-                ☰
-            </div>
+  <!-- Header & Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <!-- Mobile Menu Toggle -->
+      <div class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">
+        ☰
+      </div>
 
-            <!-- Logo -->
-            <a href="#home" class="brand">
-                SIVA & HERB OILS
-            </a>
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand">
+        <i class="fa-solid fa-spa brand-icon"></i>
+        <span>SIVA &amp; HERB OILS</span>
+      </a>
 
-            <!-- Navigation -->
-            <nav id="navLinks">
-                <a class="active" href="index.html">Home</a>
-                <a href="seller.html">About Us</a>
-                <a href="catalog.html">Shop</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
+      <!-- Navigation Links -->
+      <nav id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="seller.html">About Us</a>
+        <a class="active" href="catalog.html">Shop</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
 
-            <!-- Navigation Actions -->
-            <div class="nav-actions">
-
-                <!-- Search -->
-                <div class="search-container">
-                    <form action="" class="search-form">
-
-                        <input type="text" name="search" placeholder="Search..." aria-label="Search">
-
-                        <button type="submit" aria-label="Search">
-                            <i class="fa fa-search"></i>
-                        </button>
-
-                    </form>
-                </div>
-
-
-                <!-- Cart -->
-                <a href="add to card .html" class="cart-link" aria-label="Shopping Cart">
-
-                    <i class="fa-solid fa-cart-shopping"></i>
-
-                    <span class="cart-count">3</span>
-
-                </a>
-
-            </div>
-
+      <!-- Navigation Actions -->
+      <div class="nav-actions">
+        <!-- Search Bar with Live Autocomplete -->
+        <div class="search-container">
+          <form action="catalog.html" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Search herbal oils..." aria-label="Search">
+            <button type="submit" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
         </div>
-        <div class="container">
-            <i type="button" style="background-color: rgb(1, 4, 11);">
-                <a href="catalog.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#5985E1">
-                        <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-                    </svg>
-                </a>
-            </i>
+
+        <!-- Wishlist Link -->
+        <a href="catalog.html" class="wishlist-link" aria-label="Wishlist" title="View Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="wishlistCount">0</span>
+        </a>
+
+        <!-- Cart Link with Live Counter -->
+        <a href="cart.html" class="cart-link" aria-label="Shopping Cart" id="headerCartLink" title="View Bag">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container py-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0 small">
+        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+        <li class="breadcrumb-item"><a href="catalog.html" class="text-decoration-none text-muted">Shop</a></li>
+        <li class="breadcrumb-item"><a href="catalog.html?category=hair-care" class="text-decoration-none text-muted">Herbal Hair Care</a></li>
+        <li class="breadcrumb-item active text-green fw-semibold" aria-current="page">Amla &amp; Brahmi Hair Oil</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Product Detail Section -->
+  <main class="container py-4 mb-5">
+    <div class="bg-white rounded-4 border shadow-sm p-4 p-md-5 mb-5">
+      <div class="row g-5 align-items-start">
+        
+        <!-- Product Gallery -->
+        <div class="col-lg-6">
+          <div class="gallery">
+            <div class="main-image rounded-4 overflow-hidden shadow-sm bg-sage mb-3 position-relative text-center p-3">
+              <span class="card-badge gold">Herbal Blend</span>
+              <button class="heart" aria-label="Add to wishlist" data-product-name="Amla & Brahmi Hair Oil" onclick="toggleWishlist(this, 'Amla & Brahmi Hair Oil', 499, 'assets/product-2.jpg')">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <img src="assets/product-2.jpg" id="mainProductImg" alt="Amla & Brahmi Hair Oil" class="img-fluid rounded-3" style="max-height: 440px; object-fit: contain;">
+            </div>
+
+            <!-- Thumbnail Switcher -->
+            <div class="d-flex gap-2 justify-content-center">
+              <div class="thumbnail active p-1 border rounded-3 bg-white" style="cursor: pointer; width: 75px; height: 75px;">
+                <img src="assets/product-2.jpg" alt="Amla Thumb 1" class="w-100 h-100 object-fit-cover rounded-2">
+              </div>
+              <div class="thumbnail p-1 border rounded-3 bg-white" style="cursor: pointer; width: 75px; height: 75px;">
+                <img src="assets/product-5.jpg" alt="Amla Thumb 2" class="w-100 h-100 object-fit-cover rounded-2">
+              </div>
+              <div class="thumbnail p-1 border rounded-3 bg-white" style="cursor: pointer; width: 75px; height: 75px;">
+                <img src="assets/product-6.jpg" alt="Amla Thumb 3" class="w-100 h-100 object-fit-cover rounded-2">
+              </div>
+            </div>
+            <p class="text-center text-muted small mt-2"><i class="fa-solid fa-camera me-1"></i> Authentic botanical infusion in sun-matured glass</p>
+          </div>
         </div>
-    </header>
 
-    <main class="container">
+        <!-- Product Information -->
+        <div class="col-lg-6">
+          <span class="text-uppercase tracking-wider text-gold fw-bold small">Hair Growth &amp; Density</span>
+          <h1 class="font-serif display-6 fw-bold text-green mt-1 mb-2">Amla &amp; Brahmi Hair Oil</h1>
+          
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="text-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+            <span class="fw-bold">4.9</span>
+            <span class="text-muted small">(188 verified reviews)</span>
+            <span class="badge bg-warning-subtle text-warning-emphasis border rounded-pill ms-2">Award Winning Blend</span>
+          </div>
 
-        <!-- PRODUCT SECTION -->
-        <section class="product-section" id="p2">
+          <div class="d-flex align-items-baseline gap-3 mb-4">
+            <h2 class="text-green fw-bold mb-0 font-serif" id="detailProductPrice">₹499</h2>
+            <del class="text-muted fs-5">₹599</del>
+            <span class="badge bg-gold text-dark fw-bold rounded-pill">Save ₹100</span>
+          </div>
 
-            <!-- PRODUCT GALLERY -->
-            <div class="gallery">
+          <p class="text-muted mb-4 lead" style="font-size: 15px;">
+            A legendary Ayurvedic formulation slow-infused under sunlight for 21 days with hand-plucked wild amla, whole brahmi leaves, and fenugreek seeds in pure wood-pressed sesame carrier.
+          </p>
 
-                <div class="main-image">
-                    <span class="product-badge">Bestseller</span>
+          <!-- Select Size -->
+          <div class="mb-4">
+            <label class="fw-bold small d-block mb-2">Choose Volume Size:</label>
+            <div class="d-flex flex-wrap gap-2 sizes">
+              <button type="button" class="btn btn-outline-dark btn-sm rounded-pill size active px-3 py-2 fw-semibold">100 ML</button>
+              <button type="button" class="btn btn-outline-dark btn-sm rounded-pill size px-3 py-2 fw-semibold">250 ML</button>
+              <button type="button" class="btn btn-outline-dark btn-sm rounded-pill size px-3 py-2 fw-semibold">500 ML</button>
+            </div>
+          </div>
 
-                    <img src="assets/product-5.jpg" alt="Cold Pressed Coconut Oil">
+          <!-- Quantity & Purchase Actions -->
+          <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+            <div class="input-group" style="width: 125px;">
+              <button class="btn btn-outline-secondary" type="button" onclick="adjustDetailQty(-1)">-</button>
+              <input type="number" id="detailQtyInput" class="form-control text-center fw-bold bg-white" value="1" min="1" readonly>
+              <button class="btn btn-outline-secondary" type="button" onclick="adjustDetailQty(1)">+</button>
+            </div>
+            
+            <button type="button" class="btn btn-green flex-grow-1 py-3 rounded-pill fw-bold shadow-sm" id="detailAddCartBtn">
+              <i class="fa-solid fa-cart-shopping me-2"></i> Add to Bag
+            </button>
+
+            <button type="button" class="btn btn-gold text-dark py-3 px-4 rounded-pill fw-bold shadow-sm" id="detailBuyNowBtn">
+              Buy Now
+            </button>
+          </div>
+
+          <!-- Shipping & Delivery Perks -->
+          <div class="bg-sage p-3 rounded-3 small mb-4">
+            <div class="d-flex align-items-center gap-2 text-dark mb-1">
+              <i class="fa-solid fa-truck-fast text-green"></i>
+              <strong>Free Express Shipping on orders above ₹999</strong>
+            </div>
+            <div class="text-muted" style="font-size: 12px;">Delivered in pristine condition within 3 to 5 business days with tamper-proof seal.</div>
+          </div>
+
+          <!-- Accordion Details -->
+          <div class="accordion accordion-flush" id="productInfoAccordion">
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold text-green" type="button" data-bs-toggle="collapse" data-bs-target="#accIngredients">
+                  <i class="fa-solid fa-seedling me-2 text-gold"></i> Key Botanical Botanicals
+                </button>
+              </h2>
+              <div id="accIngredients" class="accordion-collapse collapse" data-bs-parent="#productInfoAccordion">
+                <div class="accordion-body small text-muted">
+                  <strong>Wild Amla (Phyllanthus Emblica):</strong> Enriched with natural Vitamin C and flavonoids to stimulate cellular collagen and prevent follicular thinning.<br><br>
+                  <strong>Gotu Kola / Brahmi (Bacopa Monnieri):</strong> Cools scalp heat, soothes restlessness, and fortifies root strength from within.
                 </div>
-
-                <div class="thumbnails">
-
-                    <div class="thumbnail active">
-                        <img src=" https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTaV2GDSkWxeEBq74aTTNQPNnxTAuUzb_27iqZFnCY6xADUFoBH"
-                            alt="Coconut Oil">
-                    </div>
-
-                    <div class="thumbnail">
-                        <img src=" data:image/jpeg;base64,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"
-                            alt="Coconut Oil">
-                    </div>
-
-                    <div class="thumbnail">
-                        <img src=" https://m.media-amazon.com/images/I/711PbwD4kPL._SY355_.jpg " alt="Coconut Oil">
-                    </div>
-
-                    <div class="thumbnail">
-                        <img src="assets/product-5.jpg" alt="Coconut Oil">
-                    </div>
-
-                </div>
-
-                <p class="image-caption">
-                    Oils and serum
-                </p>
-
+              </div>
             </div>
 
-            <!-- PRODUCT INFORMATION -->
-            <div class="product-information">
-
-                <span class="collection">
-                    HERB OILS
-                </span>
-
-                <h1>
-                    Oils and serum
-                </h1>
-
-                <div class="product-price">
-                    ₹329
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold text-green" type="button" data-bs-toggle="collapse" data-bs-target="#accUsage">
+                  <i class="fa-solid fa-spa me-2 text-gold"></i> Scalp Therapy Ritual
+                </button>
+              </h2>
+              <div id="accUsage" class="accordion-collapse collapse" data-bs-parent="#productInfoAccordion">
+                <div class="accordion-body small text-muted">
+                  Section hair and apply directly onto the scalp with fingertips. Massage in gentle strokes for 10 minutes to activate microcirculation. Leave on for at least 2 hours or overnight for deep nourishment.
                 </div>
-
-                <p class="shipping-text">
-                    Available in all major cities.
-                    Free shipping on orders over ₹999.
-                </p>
-
-                <!-- SIZE -->
-                <div class="size-header">
-                    <span>Select Size</span>
-                </div>
-
-                <div class="sizes">
-                    <span class="size active">50 ML</span>
-                    <span class="size">100 ML</span>
-                    <span class="size">250 ML</span>
-                </div>
-
-                <!-- BUTTONS -->
-                <div class="action-buttons">
-
-                    <a href="#" class="wishlist-btn">
-                        <i class="fa-solid fa-heart"></i>
-                        WISHLIST
-                    </a>
-
-                    <a href="checkout.html" class="buy-btn">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        BUY NOW
-                    </a>
-
-                </div>
-
-                <!-- PRODUCT DETAILS -->
-                <div class="product-details">
-
-                    <h3>PRODUCT DETAILS</h3>
-
-                    <p>
-                        Hair: Used as a nourishing scalp massage oil (champi) to promote healthy roots, smooth down
-                        frizz, and restore natural shine to standard hair types.
-                        Body: Applied directly to slightly
-                        damp skin post-shower to lock in lasting moisture, smooth texture, and add a luminous glow.
-                    </p>
-
-                    <h3>BENEFITS</h3>
-
-                    <ul>
-                        <li>100% natural ingredients</li>
-                        <li>Scalp Nourishment:</li>
-                        <li>Strand Protection</li>
-                        <li>Deep Hydration</li>
-                    </ul>
-
-                    <h3>SUITABLE FOR</h3>
-
-                    <p>
-                        Multi-use formulas like this typically offer the following dual benefits for both hair and body:
-                    </p>
-
-                </div>
-
+              </div>
             </div>
 
-        </section>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold text-green" type="button" data-bs-toggle="collapse" data-bs-target="#accPurity">
+                  <i class="fa-solid fa-certificate me-2 text-gold"></i> Guaranteed Purity
+                </button>
+              </h2>
+              <div id="accPurity" class="accordion-collapse collapse" data-bs-parent="#productInfoAccordion">
+                <div class="accordion-body small text-muted">
+                  Zero mineral oil (LLP), zero artificial green colorants, zero artificial fragrances. Natural earthy herbal aroma from real botanical leaves and roots.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!-- FEATURES -->
-        <section class="features">
+      </div>
+    </div>
 
-            <div class="feature">
-                <i class="fa-solid fa-truck"></i>
+    <!-- Customer Reviews & Submission -->
+    <section class="bg-white rounded-4 border shadow-sm p-4 p-md-5 mb-5">
+      <div class="row g-4">
+        <!-- Review Summary -->
+        <div class="col-lg-4 text-center border-end-lg">
+          <h3 class="font-serif fw-bold text-dark">Customer Reviews</h3>
+          <div class="display-3 font-serif fw-bold text-green my-2">4.9</div>
+          <div class="text-gold fs-5 mb-2">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="text-muted small">Based on 188 verified hair care transformations</p>
 
+          <hr class="my-4">
+
+          <!-- Submit Review Form -->
+          <div class="text-start">
+            <h6 class="fw-bold text-dark mb-2">Share Your Experience</h6>
+            <form id="writeReviewForm">
+              <div class="mb-2">
+                <label class="form-label small text-muted mb-1">Your Rating:</label>
+                <div class="d-flex gap-2">
+                  <i class="fa-solid fa-star rating-select-star" data-star="1"></i>
+                  <i class="fa-solid fa-star rating-select-star" data-star="2"></i>
+                  <i class="fa-solid fa-star rating-select-star" data-star="3"></i>
+                  <i class="fa-solid fa-star rating-select-star" data-star="4"></i>
+                  <i class="fa-solid fa-star rating-select-star" data-star="5"></i>
+                </div>
+              </div>
+              <div class="mb-2">
+                <input type="text" class="form-control form-control-sm" id="reviewerName" placeholder="Your Name" required>
+              </div>
+              <div class="mb-2">
+                <textarea class="form-control form-control-sm" id="reviewerComment" rows="3" placeholder="How has this oil transformed your routine?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-green btn-sm rounded-pill w-100">Submit Review</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Verified Reviews List -->
+        <div class="col-lg-8">
+          <h5 class="font-serif fw-bold text-dark mb-4">Recent Verified Feedback</h5>
+          <div id="productReviewsList">
+            <div class="review-item p-3 mb-3 bg-sage rounded-3 border">
+              <div class="d-flex justify-content-between align-items-center mb-1">
                 <div>
-                    <h3>Free Shipping</h3>
-                    <p>Free delivery on orders over ₹999</p>
+                  <strong class="text-dark">Dr. Meenakshi Raman</strong>
+                  <span class="badge bg-success-subtle text-success small ms-2"><i class="fa-solid fa-circle-check"></i> Verified Buyer</span>
                 </div>
+                <span class="text-muted small">3 days ago</span>
+              </div>
+              <div class="text-gold small mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="text-muted small mb-0">After two months of regular use, hair fall reduced dramatically. My scalp feels noticeably calmer and the cooling brahmi effect induces peaceful sleep.</p>
             </div>
 
-            <div class="feature">
-                <i class="fa-solid fa-rotate-left"></i>
-
+            <div class="review-item p-3 mb-3 bg-sage rounded-3 border">
+              <div class="d-flex justify-content-between align-items-center mb-1">
                 <div>
-                    <h3>Easy Returns</h3>
-                    <p>Easy return within 7 days</p>
+                  <strong class="text-dark">Kavitha Rajan</strong>
+                  <span class="badge bg-success-subtle text-success small ms-2"><i class="fa-solid fa-circle-check"></i> Verified Buyer</span>
                 </div>
+                <span class="text-muted small">2 weeks ago</span>
+              </div>
+              <div class="text-gold small mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="text-muted small mb-0">Authentic herbal quality! The oil has a rich deep herbal tone that smells like traditional village oil preparation.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="feature">
-                <i class="fa-solid fa-shield-halved"></i>
+    <!-- Related Products -->
+    <section>
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <span class="text-uppercase tracking-wider text-gold fw-bold small">Botanical Pairings</span>
+          <h3 class="font-serif fw-bold text-green mb-0">You May Also Like</h3>
+        </div>
+        <a href="catalog.html" class="btn btn-outline-green btn-sm rounded-pill">View All Oils →</a>
+      </div>
 
-                <div>
-                    <h3>Secure Shopping</h3>
-                    <p>Safe and secure checkout</p>
-                </div>
+      <div class="row g-4">
+        <div class="col-md-4 col-sm-6">
+          <article class="product-card h-100">
+            <span class="card-badge">Bestseller</span>
+            <div class="card-img-wrap" style="height: 220px;">
+              <img src="assets/product-1.jpg" alt="Coconut Oil" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-
-        </section>
-
-        <!-- SIMILAR PRODUCTS -->
-        <section class="similar-products">
-
-            <h2>Similar Products</h2>
-
-            <div class="similar-grid">
-
-                <!-- PRODUCT 1 -->
-                <article class="similar-card">
-
-                    <div class="similar-image">
-                        <img src="assets/product-1.jpg" alt="Oils and Serum">
-                        <span class="badge">Bestseller</span>
-                        <a href="#" class="heart">♡</a>
-                    </div>
-
-                    <div class="similar-info">
-
-                        <span class="category">
-                            COOKING OIL
-                        </span>
-
-                        <h3>
-                            Cold Pressed Coconut Oil
-                        </h3>
-
-                        <p>
-                            Pure coconut oil traditionally extracted for everyday cooking.
-
-                        </p>
-
-                        <div class="rating">
-                            <span>★★★★★</span>
-                            <small>4.9 (98)</small>
-                        </div>
-
-                        <div class="card-bottom">
-                            <strong>₹299</strong>
-
-                            <a href="p1.html" class="card-buy">
-                                Buy Now
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- PRODUCT 2 -->
-                <article class="similar-card">
-
-                    <div class="similar-image">
-                        <img src="assets/Screenshot 2026-09-10 103944.png" alt="Cold Pressed Sesame Oil">
-                        <span class="badge natural">Natural</span>
-                        <a href="#" class="heart">♡</a>
-                    </div>
-
-                    <div class="similar-info">
-
-                        <span class="category">
-                            COOKING OIL
-                        </span>
-
-                        <h3>
-                            Cold Pressed Sesame Oil
-                        </h3>
-
-                        <p>
-                            Traditionally extracted sesame oil
-                            with a warm nutty flavour.
-                        </p>
-
-                        <div class="rating">
-                            <span>★★★★★</span>
-                            <small>4.9 (87)</small>
-                        </div>
-
-                        <div class="card-bottom">
-                            <strong>₹349</strong>
-
-                            <a href="p3.html" class="card-buy">
-                                Buy Now
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- PRODUCT 3 -->
-                <article class="similar-card">
-
-                    <div class="similar-image">
-                        <img src="assets/product-3.jpg" alt="Hibiscus Revitalizing Oil">
-                        <span class="badge">New</span>
-                        <a href="#" class="heart">♡</a>
-                    </div>
-
-                    <div class="similar-info">
-
-                        <span class="category">
-                            HAIR CARE
-                        </span>
-
-                        <h3>
-                            Hibiscus Revitalizing Oil
-                        </h3>
-
-                        <p>
-                            Nourishes your scalp and hair
-                            naturally.
-                        </p>
-
-                        <div class="rating">
-                            <span>★★★★★</span>
-                            <small>4.8 (64)</small>
-                        </div>
-
-                        <div class="card-bottom">
-                            <strong>₹249</strong>
-
-                            <a href="p4.html" class="card-buy">
-                                Buy Now
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- PRODUCT 4 -->
-                <article class="similar-card">
-
-                    <div class="similar-image">
-                        <img src="assets/Screenshot 2026-09-10 103918.png" alt="Pure Neem Oil">
-                        <span class="badge herbal">Herbal</span>
-                        <a href="#" class="heart">♡</a>
-                    </div>
-
-                    <div class="similar-info">
-
-                        <span class="category">
-                            SKIN CARE
-                        </span>
-
-                        <h3>
-                            Pure Neem Oil
-                        </h3>
-
-                        <p>
-                            Herbal neem oil prepared for
-                            natural personal care.
-                        </p>
-
-                        <div class="rating">
-                            <span>★★★★★</span>
-                            <small>4.7 (52)</small>
-                        </div>
-
-                        <div class="card-bottom">
-                            <strong>₹279</strong>
-
-                            <a href="p5.html" class="card-buy">
-                                Buy Now
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
+            <div class="product-info p-3">
+              <h5 class="product-title font-serif fw-bold"><a href="p1.html" class="text-decoration-none text-dark">Cold Pressed Coconut Oil</a></h5>
+              <b class="product-price text-green">₹ 299.00</b>
+              <button type="button" class="btn btn-green btn-sm rounded-pill w-100 mt-3" onclick="addToCart('Cold Pressed Coconut Oil', 299, 'assets/product-1.jpg')">
+                + Add to Bag
+              </button>
             </div>
+          </article>
+        </div>
 
-        </section>
+        <div class="col-md-4 col-sm-6">
+          <article class="product-card h-100">
+            <span class="card-badge">Anti-Dandruff</span>
+            <div class="card-img-wrap" style="height: 220px;">
+              <img src="assets/product-4.jpg" alt="Neem Scalp Oil" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="product-info p-3">
+              <h5 class="product-title font-serif fw-bold"><a href="p3.html" class="text-decoration-none text-dark">Neem Scalp Care Oil</a></h5>
+              <b class="product-price text-green">₹ 199.00</b>
+              <button type="button" class="btn btn-green btn-sm rounded-pill w-100 mt-3" onclick="addToCart('Neem Scalp Care Oil', 199, 'assets/product-4.jpg')">
+                + Add to Bag
+              </button>
+            </div>
+          </article>
+        </div>
 
-    </main>
+        <div class="col-md-4 col-sm-6">
+          <article class="product-card h-100">
+            <span class="card-badge gold">Luxury Care</span>
+            <div class="card-img-wrap" style="height: 220px;">
+              <img src="assets/product-6.jpg" alt="Intensive Hair Oil" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="product-info p-3">
+              <h5 class="product-title font-serif fw-bold"><a href="p4.html" class="text-decoration-none text-dark">Intensive Hair Care Oil</a></h5>
+              <b class="product-price text-green">₹ 399.00</b>
+              <button type="button" class="btn btn-green btn-sm rounded-pill w-100 mt-3" onclick="addToCart('Intensive Hair Care Oil', 399, 'assets/product-6.jpg')">
+                + Add to Bag
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <!-- Floating Toast Notification -->
+  <div class="cart-toast" id="cartToast">
+    <div class="toast-icon-wrap" id="toastIcon">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="toast-body">
+      <strong id="toastTitle">Added to Cart!</strong>
+      <p id="toastMessage">Product added to your shopping bag.</p>
+      <div class="toast-actions" id="toastActions">
+        <a href="cart.html" class="toast-cart-btn">View Bag →</a>
+      </div>
+    </div>
+    <button class="toast-close" onclick="closeToast()" aria-label="Close notification">&times;</button>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Site Footer -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-box company">
+        <a href="index.html" class="footer-brand text-decoration-none">
+          <i class="fa-solid fa-spa"></i>
+          <span>SIVA &amp; HERB OILS</span>
+        </a>
+        <p>Crafted with traditional patience and botanical purity to bring authentic wellness into your everyday rituals.</p>
+        <div class="footer-contact-info">
+          <p><i class="fa-solid fa-phone"></i> +91 63925 72657</p>
+          <p><i class="fa-solid fa-envelope"></i> care@sivaherboils.com</p>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="seller.html">About Our Process</a>
+        <a href="catalog.html">Shop Catalog</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Customer Care</h4>
+        <a href="cart.html">View Shopping Bag</a>
+        <a href="productcheckout.html">Checkout</a>
+        <a href="catalog.html">Wishlist</a>
+        <a href="contact.html">Order Inquiries</a>
+      </div>
+
+      <div class="footer-box payment-box">
+        <h4>Accepted Payments</h4>
+        <div class="payments">
+          <span>UPI</span>
+          <span>VISA</span>
+          <span>Mastercard</span>
+          <span>RuPay</span>
+          <span>COD</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 SIVA &amp; HERB OILS. All rights reserved. Handcrafted botanical wellness.
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core Script -->
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
-
 </html>
