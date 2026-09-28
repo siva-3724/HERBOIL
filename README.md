@@ -68,30 +68,6 @@ Bootstrap 5
 JavaScript
 Font Awesome
 Google Fonts
-
-## 📁 Project Structure
-HERBOIL/
-│
-├── index.html
-├── about.html
-├── catalog.html
-├── contact.html
-├── productdetail.html
-│
-├── style.css
-├── oilmake.css
-│
-├── assets/
-│   ├── hero-bottle.jpg
-│   ├── product-1.jpg
-│   ├── product-2.jpg
-│   ├── product-4.jpg
-│   ├── product-6.jpg
-│   ├── product-8.jpg
-│   └── ...
-│
-└── README.md
-
 ## 🚀 How to Run
 
 ### 1. Clone the repository
