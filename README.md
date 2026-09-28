@@ -1,7 +1,7 @@
 # 🌿SIVA & HERBOIL — Natural Oils & Herbal Care
-Project Link https://ecommerceoil.netlify.app/
+# Project Link https://ecommerceoil.netlify.app/
 
-# HERBOIL** is a modern and responsive herbal oil website designed to showcase natural oils, traditional ingredients, and everyday hair and body care products through a clean and attractive online experience.
+ HERBOIL** is a modern and responsive herbal oil website designed to showcase natural oils, traditional ingredients, and everyday hair and body care products through a clean and attractive online experience.
 
 ## ✨ About the Project
 <img width="1920" height="5027" alt="image" src="https://github.com/user-attachments/assets/5322ecf7-2b01-4543-80d5-6cc987d1d97e" />
