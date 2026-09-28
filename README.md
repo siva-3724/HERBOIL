@@ -96,9 +96,7 @@ HERBOIL/
 
 ### 1. Clone the repository
 
-```bash
-git clone YOUR-GITHUB-REPOSITORY-URL
-```
+ git clone repository  https://github.com/siva-3724/HERBOIL.git
 
 ### 2. Open the project
 
